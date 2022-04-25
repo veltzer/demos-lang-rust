@@ -3,6 +3,8 @@
 ##############
 # do you want dependency on the Makefile itself ?
 DO_ALLDEP:=1
+# do you want to do tools?
+DO_TOOLS:=1
 
 ########
 # code #
@@ -11,7 +13,7 @@ DO_ALLDEP:=1
 # dependency on the makefile itself
 ifeq ($(DO_ALLDEP),1)
 .EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
-endif
+endif # DO_ALLDEP
 
 SRC:=src
 SOURCES:=$(shell find $(SRC) -name "*.rs" -and -type f)
