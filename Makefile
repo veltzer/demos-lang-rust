@@ -3,8 +3,6 @@
 ##############
 # do you want dependency on the Makefile itself ?
 DO_ALLDEP:=1
-# do you want to do tools?
-DO_TOOLS:=1
 
 ########
 # code #
