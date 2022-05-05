@@ -1,3 +1,0 @@
-# These are the packges that are needed for this repo to work
-# on ubuntu
-rustc
