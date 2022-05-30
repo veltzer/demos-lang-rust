@@ -15,7 +15,7 @@ endif # DO_ALLDEP
 
 SRC:=src
 SOURCES:=$(shell find $(SRC) -name "*.rs" -and -type f)
-EXES:=$(addsuffix .exe, $(basename $(SOURCES)))
+EXES:=$(addsuffix .elf, $(basename $(SOURCES)))
 FLAGS:=-O
 
 #########
@@ -35,6 +35,6 @@ debug:
 ############
 # patterns #
 ############
-$(EXES): %.exe: %.rs
+$(EXES): %.elf: %.rs
 	$(info doing [$@])
 	@rustc $(FLAGS) $< -o $@
