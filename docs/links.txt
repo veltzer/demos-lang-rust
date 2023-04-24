@@ -1,1 +1,2 @@
-https://github.com/rust-lang/rust-by-example
+A great rust book resources:
+	https://github.com/rust-lang/rust-by-example
