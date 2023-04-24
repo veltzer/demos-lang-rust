@@ -1,3 +1,4 @@
 packages=[
-    "rustc",
+    "rustc",  # this provides "rustdoc" as well as "rustc"
+    "cargo",
 ]
