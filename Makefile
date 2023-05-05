@@ -5,10 +5,13 @@
 DO_ALLDEP:=1
 # do you want to show the commands executed ?
 DO_MKDBG?=0
+# do you compile rust files?
+DO_EXECS:=1
 
 ########
 # code #
 ########
+ALL:=
 
 # dependency on the makefile itself
 ifeq ($(DO_ALLDEP),1)
@@ -28,6 +31,10 @@ SRC:=src
 SOURCES:=$(shell find $(SRC) -name "*.rs" -and -type f)
 EXES:=$(addsuffix .elf, $(basename $(SOURCES)))
 FLAGS:=-O
+
+ifeq ($(DO_EXECS),1)
+ALL+=$(EXES)
+endif # DO_EXECS
 
 #########
 # rules #
