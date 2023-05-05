@@ -110,3 +110,5 @@ coverage.xml
 
 # generic
 *.log
+
+target/
