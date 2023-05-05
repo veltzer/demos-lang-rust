@@ -1,0 +1,9 @@
+[workspace]
+
+members = [
+    "hello",
+    "goodbye",
+    "ffi_to_c",
+    "inline-c",
+    "number_of_cores",
+]
