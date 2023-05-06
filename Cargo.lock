@@ -109,6 +109,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "ffi-to-c"
+version = "0.1.0"
+dependencies = [
+ "cc",
+]
+
+[[package]]
 name = "float-cmp"
 version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -141,10 +148,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fed44880c466736ef9a5c5b5facefb5ed0785676d0c02d612db14e54f0d84286"
 
 [[package]]
-name = "inline-c"
+name = "inline"
 version = "0.1.0"
 dependencies = [
- "inline-c 0.1.7",
+ "inline-c",
 ]
 
 [[package]]
@@ -349,13 +356,6 @@ name = "regex-syntax"
 version = "0.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a5996294f19bd3aae0453a862ad728f60e6600695733dd5df01da90c54363a3c"
-
-[[package]]
-name = "rust-ffi-to-c"
-version = "0.1.0"
-dependencies = [
- "cc",
-]
 
 [[package]]
 name = "rustc_version"

@@ -1,4 +1,5 @@
 use inline_c::assert_c;
+extern crate inline_c;
 
 fn main() {
     (assert_c! {
