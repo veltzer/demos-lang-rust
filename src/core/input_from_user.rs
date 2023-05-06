@@ -1,4 +1,6 @@
+#[allow(unused_variables)]
+
 fn main() {
     print!("What is your name: ");
-    let mut name: String = String::new();
+    let name: String = String::new();
 }
