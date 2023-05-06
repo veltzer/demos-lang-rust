@@ -4,6 +4,6 @@ members = [
     "hello",
     "goodbye",
     "ffi_to_c",
-    "inline-c",
+    "inline",
     "number_of_cores",
 ]
