@@ -9,6 +9,10 @@ members = [
 ]
 
 [profile.dev]
+# all the following options are to reduce binary sizes
+# see https://www.youtube.com/watch?v=b2qe3L4BX-Y
 strip=true
 debug=false
-opt-level=3
+opt-level="s"
+lto=true
+codegen-units=1
