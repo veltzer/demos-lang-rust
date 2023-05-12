@@ -30,7 +30,7 @@ endif # DO_MKDBG
 SRC:=src
 SOURCES:=$(shell find $(SRC) -name "*.rs" -and -type f)
 EXES:=$(addsuffix .elf, $(basename $(SOURCES)))
-FLAGS:=-O
+FLAGS:=-O -C debuginfo=0
 
 ifeq ($(DO_EXECS),1)
 ALL+=$(EXES)
@@ -61,3 +61,4 @@ debug:
 $(EXES): %.elf: %.rs
 	$(info doing [$@])
 	$(Q)rustc $(FLAGS) $< -o $@
+	$(Q)strip $@
