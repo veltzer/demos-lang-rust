@@ -16,3 +16,8 @@ debug=false
 opt-level="s"
 lto=true
 codegen-units=1
+
+# [package]
+# name="toplevel"
+# version="0.1.0"
+# default-run="hello"
