@@ -7,6 +7,9 @@ members = [
     "inline",
     "number_of_cores",
 ]
+default-members = [
+    "hello",
+]
 
 [profile.dev]
 # all the following options are to reduce binary sizes
