@@ -3,9 +3,9 @@ use std::thread;
 use std::time::Duration;
 use std::io::*;
 
-/*
- * This is a solution to the exercise.
- */
+//
+// This is a solution to the exercise.
+//
 
 fn thread_one(tx: Sender<i32>) {
     print!("Give me a number: ");
