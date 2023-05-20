@@ -1,6 +1,5 @@
-// This is a simple exapmle of multh-threading in rust
-// you usually want to join your threads and not leave them
-// in a detached state.
+// This is an example of how to use closures to pass parameters
+// to the thread worker function in Rust.
 
 use std::thread;
 use std::time::Duration;
