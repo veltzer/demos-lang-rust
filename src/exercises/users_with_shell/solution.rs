@@ -2,7 +2,7 @@ use std::fs::File;
 use std::io::*;
 
 /*
- * This is a solution to the users exercise.
+ * This is a solution to the exercise.
  */
 
 fn main() {
