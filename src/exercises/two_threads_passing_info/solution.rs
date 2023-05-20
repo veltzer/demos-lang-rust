@@ -1,5 +1,6 @@
 use std::sync::mpsc::*;
 use std::thread;
+use std::time::Duration;
 use std::io::*;
 
 /*
@@ -8,11 +9,13 @@ use std::io::*;
 
 fn thread_one(tx: Sender<i32>) {
     print!("Give me a number: ");
-    stdout().lock().flush();
+    stdout().flush().expect("canont flush stdout");
     for line in stdin().lines() {
-        // println!("{}", line.unwrap());
         let x: i32 = line.unwrap().trim().parse().expect("Input not an integer");
         tx.send(x).unwrap();
+        thread::sleep(Duration::from_secs(1));
+        print!("Give me a number: ");
+        stdout().flush().expect("canont flush stdout");
     }
 }
 
