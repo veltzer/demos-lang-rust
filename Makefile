@@ -31,6 +31,8 @@ SRC:=src
 SOURCES:=$(shell find $(SRC) -name "*.rs" -and -type f)
 EXES:=$(addsuffix .elf, $(basename $(SOURCES)))
 FLAGS:=-O -C debuginfo=0
+# FLAGS:=-O -g
+# FLAGS:=
 
 ifeq ($(DO_EXECS),1)
 ALL+=$(EXES)
