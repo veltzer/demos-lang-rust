@@ -1,8 +1,0 @@
-emphsis on performance
-async apis
-multi-core
-multi-threading
-security low level
-
-exercise as homework
-examples
