@@ -16,29 +16,35 @@ fn time_it(func: fn()) {
     println!("Elapsed: {:.2?}", elapsed);
 }
 
-fn code() {
+fn code1(limit: i64) {
     let mut sum: i64=0;
     let mut add: bool=true;
-    for i in 0..9999999999i64 { 
+    for i in 0..limit { 
         if add {
-            sum+=i*i;
+            sum+=i;
         } else {
-            sum-=i*i;
+            sum-=i;
         }
         add = !add;
     }
     println!("sum is {sum}")
 }
 
-fn code2() {
+fn code2(limit: i64) {
     let mut sum: i64=0;
-    for i in 0..9999999999i64 { 
-        sum+=i*i;
+    for i in 0..limit { 
+        sum+=i;
     }
+    /*
+    for i in (1..limit).step_by(2) { 
+         sum-=2*i;
+    }
+    */
     println!("sum is {sum}")
 }
 
 fn main() {
-    time_it(code);
-    time_it(code2);
+    const LIMIT: i64=9999999999;
+    time_it(|| { code1(LIMIT) });
+    time_it(|| { code2(LIMIT) });
 }
