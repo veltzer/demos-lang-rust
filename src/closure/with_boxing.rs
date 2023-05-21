@@ -1,3 +1,9 @@
+// This is yet another way to deal with annotating the type of a function
+// returning a closure by wrapping it with the Box.
+// For efficiency Rust mandates fixed return size for all functions.
+// A Box is just a pointer to some other thing on the heap but it has a fixed
+// size.
+
 fn make_adder(outer: i32) -> Box<dyn Fn(i32) -> i32> {
     Box::new(move |inner: i32| outer+inner)
 }
