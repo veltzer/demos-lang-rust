@@ -1,3 +1,8 @@
+// this example shows you how to get and print types of variables in rust
+//
+// References:
+// - https://stackoverflow.com/questions/21747136/how-do-i-print-in-rust-the-type-of-a-variable
+
 use std::any::type_name;
 
 fn get_type_name<T>(_: &T) -> &'static str {
