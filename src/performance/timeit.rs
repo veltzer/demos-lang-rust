@@ -30,6 +30,15 @@ fn code() {
     println!("sum is {sum}")
 }
 
+fn code2() {
+    let mut sum: i64=0;
+    for i in 0..9999999999i64 { 
+        sum+=i*i;
+    }
+    println!("sum is {sum}")
+}
+
 fn main() {
-    time_it(code)
+    time_it(code);
+    time_it(code2);
 }
