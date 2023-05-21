@@ -17,6 +17,6 @@ chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gi
 
 ## number of examples 
 
-Currently there are 25 examples in this repo.
+Currently there are 33 examples in this repo.
 
 Mark Veltzer, Copyright © 2020, 2021, 2022, 2023
