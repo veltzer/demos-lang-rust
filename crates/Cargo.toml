@@ -6,10 +6,18 @@ members = [
     "ffi_to_c",
     "inline",
     "number_of_cores",
+    "affinity",
 ]
-default-members = [
-    "hello",
-]
+# these are the crates you want to manipulate by default (unless otherwise specified)
+# if you do not specify the "default-members" configuration option then it is all of the
+# above mentioned under "members"
+# default-members = [
+#     "hello",
+#     "goodbye",
+#     "ffi_to_c",
+#     "inline",
+#     "number_of_cores",
+# ]
 
 [profile.dev]
 # all the following options are to reduce binary sizes
