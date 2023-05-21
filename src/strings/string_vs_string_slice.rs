@@ -8,8 +8,21 @@ fn print_type_of<T>(_: &T) {
 }
 
 fn main() {
+    // this is a regular string
     let string: String = String::new();
-    let slice: &str = "Hello";
     print_type_of(&string);
+
+    // this is a slice, or &str
+    let slice: &str = "Hello";
     print_type_of(&slice);
+
+    // you may think you can write the following line but you really cannot,
+    // as it gives you a compilation error:
+    // "doesn't have a size known at compile-time"
+    // remember, in Rust stuff on the stack must be of known size.
+    //let real_str: str = "hello";
+
+    // a differrent way of doing this is using Box
+    // Box allows you to store a pointer, which is of constant size, to something on the heap
+    // let boxed_string: Box<str> = Box("hello");
 }
