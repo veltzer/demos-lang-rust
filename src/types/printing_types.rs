@@ -15,6 +15,10 @@ fn print_type_of<T>(_: &T) {
 
 fn main() {
     let x: i32=7;
-    print_type_of(&x);
+    let y=5;
+    let t=(45,6.7,1);
     println!("type of x is {}", get_type_name(&x));
+    print_type_of(&x);
+    print_type_of(&y);
+    print_type_of(&t);
 }
