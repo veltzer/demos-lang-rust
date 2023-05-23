@@ -3,6 +3,8 @@
 // References:
 // - https://docs.rs/fork/latest/fork/
 
+extern crate fork;
+
 use fork::{daemon, Fork};
 use std::process::Command;
 
