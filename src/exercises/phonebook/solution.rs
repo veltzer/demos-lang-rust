@@ -1,4 +1,4 @@
-// This is a simple example of a HashMap in rust
+// This is a solution to the phonebook exercise
 
 use std::collections::HashMap;
 use std::io::{stdout,stdin,Write,BufReader,BufRead};
@@ -8,10 +8,13 @@ fn read_book() -> HashMap::<String, String> {
 	let mut pb = HashMap::<String, String>::new();
     let file = File::open("phonebook.txt").unwrap();
     let lines = BufReader::new(file).lines(); 
-    pb.insert("mark".to_string(), "0505665636".to_string());
-    for _line in lines {
-         // let parts: Vec<&str> = line.unwrap().strip_suffix("\n").unwrap().split(",").collect();
-         //pb.insert(parts[0].to_string(), parts[1].to_string());
+    // pb.insert("mark".to_string(), "0505665636".to_string());
+    for line in lines {
+        let fline = line.unwrap();
+        // let parts: Vec<&str> = fline.strip_suffix("\n").unwrap().split(",").collect();
+        let parts: Vec<&str> = fline.split(",").collect();
+        println!("{:?}", parts);
+        pb.insert(parts[0].to_string(), parts[1].to_string());
     }
     pb
 }
@@ -23,6 +26,7 @@ fn print(pb: &HashMap<String, String>) {
 }
 
 fn write(_pb: &HashMap<String, String>) {
+    println!("in write...");
 }
 
 fn print_menu() -> i32 {
