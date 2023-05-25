@@ -4,9 +4,9 @@ use std::io::{stdout,stdin,Write};
 
 fn main() {
     print!("What is your name: ");
-    stdout().flush().expect("canont flush stdout");
+    stdout().flush().unwrap();
     let mut name: String = String::new();
-    stdin().read_line(&mut name).expect("Did not enter a correct string");
+    stdin().read_line(&mut name).unwrap();
     name = name.strip_suffix("\n").unwrap().to_string();
     println!("Your name is [{name}]...");
 }

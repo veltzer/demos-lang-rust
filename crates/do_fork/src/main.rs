@@ -15,6 +15,6 @@ fn main() {
 	   Command::new("sleep")
 		   .arg("3")
 		   .output()
-		   .expect("failed to execute process");
+		   .unwrap();
 	}
 }

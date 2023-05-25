@@ -9,13 +9,13 @@ use std::io::*;
 
 fn thread_one(tx: Sender<i32>) {
     print!("Give me a number: ");
-    stdout().flush().expect("canont flush stdout");
+    stdout().flush().unwrap();
     for line in stdin().lines() {
-        let x: i32 = line.unwrap().trim().parse().expect("Input not an integer");
+        let x: i32 = line.unwrap().trim().parse().unwrap();
         tx.send(x).unwrap();
         thread::sleep(Duration::from_secs(1));
         print!("Give me a number: ");
-        stdout().flush().expect("canont flush stdout");
+        stdout().flush().unwrap();
     }
 }
 
