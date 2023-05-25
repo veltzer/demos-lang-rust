@@ -1,3 +1,6 @@
+// This is an example of borrowing an object without a function but rather
+// with just a scope.
+
 fn main() {
     let mut s1 = String::from("hello");
     s1.push_str(" world");
@@ -6,13 +9,4 @@ fn main() {
         println!("s2 is {s2}");
     }
     println!("s1 is {s1}");
-    // let len = calculate_length(&mut s1);
-    // println!("The length of '{}' is {}.", s1, len);
 }
-
-/*
-fn calculate_length(s: &mut String) -> usize {
-    s.push_str("!");
-    s.len()
-}
-*/
