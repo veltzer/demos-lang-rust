@@ -8,7 +8,7 @@ use std::io::Write;
 fn main() {
     for n in 0..10 {
         print!("{n:>3}\r");
-        stdout().flush().expect("cannot flush stdout");
+        stdout().flush().unwrap();
         sleep(Duration::from_secs(1));
     }
 }

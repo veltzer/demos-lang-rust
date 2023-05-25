@@ -7,7 +7,7 @@ use std::io::*;
 
 fn main() {
     let mut shell = String::new();
-    stdin().read_line(&mut shell).expect("Failed to read line");
+    stdin().read_line(&mut shell).unwrap();
     shell = shell.strip_suffix("\n").unwrap().to_string();
     // println!("shell is [{shell}]");
     let file = File::open("/etc/passwd").unwrap();
