@@ -16,10 +16,13 @@ fn read_book() -> HashMap::<String, String> {
     pb
 }
 
-fn print_book(pb: &HashMap<String, String>) {
+fn print(pb: &HashMap<String, String>) {
 	for (name, phone) in pb {
 		println!("{name}: {phone}");
 	}
+}
+
+fn write(_pb: &HashMap<String, String>) {
 }
 
 fn print_menu() -> i32 {
@@ -28,7 +31,8 @@ fn print_menu() -> i32 {
     println!("2) search for name");
     println!("3) remove name");
     println!("4) add name");
-    println!("5) exit");
+    println!("5) write book");
+    println!("6) exit");
     print!("Selection => ");
     stdout().flush().unwrap();
     let mut selection: String = String::new();
@@ -53,11 +57,12 @@ fn main() {
     loop {
         let selection = print_menu();
         match selection {
-            1=> print_book(&phonebook),
+            1=> print(&phonebook),
             2=> search(&phonebook),
             3=> remove(&mut phonebook),
             4=> add(&mut phonebook),
-            5=> break,
+            5=> write(&phonebook),
+            6=> break,
             _ => println!("didn't get you..."),
         }
     };
