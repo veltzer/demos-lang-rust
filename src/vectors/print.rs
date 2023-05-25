@@ -9,4 +9,7 @@ fn main() {
     v.push(3);
     v.push(5);
     println!("{:?}", v);
+    for x in &v {
+        println!("{x}");
+    }
 }
