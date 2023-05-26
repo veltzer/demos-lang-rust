@@ -13,4 +13,5 @@ fn main() {
     }
     // _ = v.into_iter().map(|t| t.join().unwrap());
     //v.for_each(|t| t.join().unwrap());
+    //v.iter_mut().map(|t| t.join().unwrap());
 }
