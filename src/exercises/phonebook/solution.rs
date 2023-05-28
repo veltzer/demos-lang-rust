@@ -4,9 +4,11 @@ use std::collections::HashMap;
 use std::io::{stdout,stdin,Write,BufReader,BufRead};
 use std::fs::File;
 
+const FILENAME: &str="phonebook.txt";
+
 fn read_book() -> HashMap::<String, String> {
 	let mut pb = HashMap::<String, String>::new();
-    let file = File::open("phonebook.txt").unwrap();
+    let file = File::open(FILENAME).unwrap();
     let lines = BufReader::new(file).lines(); 
     // pb.insert("mark".to_string(), "0505665636".to_string());
     for line in lines {
@@ -25,8 +27,12 @@ fn print(pb: &HashMap<String, String>) {
 	}
 }
 
-fn write(_pb: &HashMap<String, String>) {
+fn write(pb: &HashMap<String, String>) {
     println!("in write...");
+    let mut file = File::create(FILENAME).unwrap();
+	for (name, phone) in pb {
+		writeln!(&mut file, "{name},{phone}").unwrap();
+    }
 }
 
 fn print_menu() -> i32 {
@@ -44,16 +50,39 @@ fn print_menu() -> i32 {
     selection.strip_suffix("\n").unwrap().parse().unwrap()
 }
 
-fn search(_pb: &HashMap<String, String>) {
+fn search(pb: &HashMap<String, String>) {
     println!("in search...");
+    print!("enter name: ");
+    stdout().flush().unwrap();
+    let mut name: String = String::new();
+    stdin().read_line(&mut name).unwrap();
+    name = name.strip_suffix("\n").unwrap().to_string();
+    println!("Phone is {:?}", pb.get(&name));
 }
 
-fn remove(_pb: &mut HashMap<String, String>) {
+fn remove(pb: &mut HashMap<String, String>) {
     println!("in remove...");
+    print!("enter name: ");
+    stdout().flush().unwrap();
+    let mut name: String = String::new();
+    stdin().read_line(&mut name).unwrap();
+    name = name.strip_suffix("\n").unwrap().to_string();
+    pb.remove(&name);
 }
 
-fn add(_pb: &mut HashMap<String, String>) {
+fn add(pb: &mut HashMap<String, String>) {
     println!("in add...");
+    print!("enter name: ");
+    stdout().flush().unwrap();
+    let mut name: String = String::new();
+    stdin().read_line(&mut name).unwrap();
+    name = name.strip_suffix("\n").unwrap().to_string();
+    print!("enter phone: ");
+    stdout().flush().unwrap();
+    let mut phone: String = String::new();
+    stdin().read_line(&mut phone).unwrap();
+    phone = phone.strip_suffix("\n").unwrap().to_string();
+    pb.insert(name, phone);
 }
 
 fn main() {
