@@ -1,0 +1,8 @@
+Producers consumers exercise
+
+Create a program that will launch multiple threads in rust.
+N producers and M consumers.
+The producers create random numbers in a loop sleeping for 1 mili second after
+creating each number.
+The consumers will consume these random numbers and will write then to "/dev/null".
+Use std::sync::mpsc to pass messages between the producers and the consumers.
