@@ -3,4 +3,4 @@ name = "affinity"
 version = "0.1.0"
 
 [dependencies]
-core_affinity="0.8.0"
+core_affinity = "0.8.0"
