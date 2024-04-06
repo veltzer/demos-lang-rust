@@ -42,7 +42,7 @@ endif # DO_EXECS
 # rules #
 #########
 .PHONY: all
-all: $(EXES)
+all: $(ALL)
 	@true
 .PHONY: clean
 clean:
@@ -56,7 +56,7 @@ clean_hard:
 debug:
 	$(info SOURCES is $(SOURCES))
 	$(info EXES is $(EXES))
-	@true
+
 ############
 # patterns #
 ############
