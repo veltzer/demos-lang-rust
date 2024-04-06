@@ -15,7 +15,7 @@ website: https://veltzer.github.io/demos-rust
 
 chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/veltzer/mark.veltzer)
 
-## number of examples 
+## Number of examples
 
 Currently there are 67 examples in this repo.
 
