@@ -29,13 +29,16 @@ endif # DO_MKDBG
 
 SRC:=src
 SOURCES:=$(shell find $(SRC) -name "*.rs" -and -type f)
-EXES:=$(addsuffix .elf, $(basename $(SOURCES)))
-FLAGS:=-Dwarnings -O -C debuginfo=0
+EXES_DBG:=$(addsuffix .dbg.elf, $(basename $(SOURCES)))
+EXES_REL:=$(addsuffix .rel.elf, $(basename $(SOURCES)))
+FLAGS_REL:=-Dwarnings -O -C debuginfo=0
+FLAGS_DBG:=-g -Dwarnings -O -C debuginfo=0
 # FLAGS:=-O -g
 # FLAGS:=
 
 ifeq ($(DO_EXECS),1)
-ALL+=$(EXES)
+ALL+=$(EXES_DBG)
+ALL+=$(EXES_REL)
 endif # DO_EXECS
 
 #########
@@ -55,12 +58,17 @@ clean_hard:
 .PHONY: debug
 debug:
 	$(info SOURCES is $(SOURCES))
-	$(info EXES is $(EXES))
+	$(info EXES_DBG is $(EXES_DBG))
+	$(info EXES_REL is $(EXES_REL))
 
 ############
 # patterns #
 ############
-$(EXES): %.elf: %.rs
+$(EXES_REL): %.rel.elf: %.rs
 	$(info doing [$@])
-	$(Q)rustc $(FLAGS) $< -o $@
+	$(Q)rustc $(FLAGS_REL) $< -o $@
+	$(Q)strip $@
+$(EXES_DBG): %.dbg.elf: %.rs
+	$(info doing [$@])
+	$(Q)rustc $(FLAGS_DBG) $< -o $@
 	$(Q)strip $@
