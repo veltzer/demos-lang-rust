@@ -32,9 +32,7 @@ SOURCES:=$(shell find $(SRC) -name "*.rs" -and -type f)
 EXES_DBG:=$(addsuffix .dbg.elf, $(basename $(SOURCES)))
 EXES_REL:=$(addsuffix .rel.elf, $(basename $(SOURCES)))
 FLAGS_REL:=-Dwarnings -O -C debuginfo=0
-FLAGS_DBG:=-g -Dwarnings -O -C debuginfo=0
-# FLAGS:=-O -g
-# FLAGS:=
+FLAGS_DBG:=-g -Dwarnings
 
 ifeq ($(DO_EXECS),1)
 ALL+=$(EXES_DBG)
