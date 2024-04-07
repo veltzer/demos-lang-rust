@@ -1,5 +1,9 @@
 use std::io;
 
+// This example shows that the _ special variable name is the name to assign
+// to if you don't care about the result.
+// Giving the variable a name will result in an unused variable warning.
+
 fn main() {
     println!("Guess the number!");
 
