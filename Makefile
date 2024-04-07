@@ -30,7 +30,7 @@ endif # DO_MKDBG
 SRC:=src
 SOURCES:=$(shell find $(SRC) -name "*.rs" -and -type f)
 EXES:=$(addsuffix .elf, $(basename $(SOURCES)))
-FLAGS:=-O -C debuginfo=0
+FLAGS:=-Dwarnings -O -C debuginfo=0
 # FLAGS:=-O -g
 # FLAGS:=
 
