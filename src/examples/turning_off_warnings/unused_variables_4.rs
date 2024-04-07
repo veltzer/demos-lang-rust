@@ -2,6 +2,7 @@
 
 fn main() {
     let x=42;
+    other()
 }
 
 fn other() {
