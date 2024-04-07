@@ -1,6 +1,8 @@
-// this example prints out various simple types of rust
+// This example shows that overflow is not detected
 
 fn main() {
-    let x: u8=200;
+    let mut x: u8=255;
+    println!("x is {x}");
+    x=x+1;
     println!("x is {x}");
 }
