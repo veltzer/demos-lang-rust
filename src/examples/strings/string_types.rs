@@ -14,15 +14,23 @@ fn print_type_of<T>(_: &T) {
 }
 
 fn main() {
-    // this is a regular string
+    // this is a regular string, which are mutable
     let string: String = String::from("hello");
     print_type_of(&string);
     println!("string is [{string}]");
 
-    // this is a slice, or &str
+    // this is a slice, or &str, which is immutable
     let slice: &str = "hello";
     print_type_of(&slice);
     println!("slice is [{slice}]");
+
+    // this is a slice taken from a String
+    let slice2: &str = &string[2..4];
+    println!("slice2 is [{slice2}]");
+
+    // a slice which is the entire string 
+    let slice3: &str = &string;
+    println!("slice2 is [{slice3}]");
 
     // you may think you can write the following line but you really cannot,
     // as it gives you a compilation error:
