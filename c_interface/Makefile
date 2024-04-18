@@ -1,10 +1,10 @@
 
-main.elf: main.rs libadd.a
-	rustc -L. -ladd -o $@ $<
-libadd.a: add.c
-	gcc -c -o add.o add.c
-	ar rcs libadd.a add.o
+main.elf: main.rs libclib.a
+	rustc -L. -lclib -o $@ $<
+libclib.a: clib.c
+	gcc -c -o clib.o clib.c
+	ar rcs libclib.a clib.o
 
 .PHONY: clean
 clean:
-	rm -f add.o libadd.a main.elf
+	rm -f clib.o libclib.a main.elf
