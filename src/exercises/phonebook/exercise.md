@@ -1,14 +1,16 @@
+# Phone book
+
 Write a phone book in rust.
 
-The phone book should store it's data in a file called "pb.txt"
+The phone book should store it's data in a file called "phonebook.txt"
 with the following format:
-	<name1>:<phone1>
-	<name2>:<phone2>
-	<name3>:<phone3>
-	...
+    <name1>:<phone1>
+    <name2>:<phone2>
+    <name3>:<phone3>
+    ...
 
 Read the book at the beginning populating a HashMap
-https://doc.rust-lang.org/std/collections/struct.HashMap.html
+[here](https://doc.rust-lang.org/std/collections/struct.HashMap.html)
 
 Show to following menu:
 1) print the phonebook
