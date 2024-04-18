@@ -21,9 +21,9 @@ fn main() {
     let word = first_word(&s);
     println!("the first word is: {}", word);
     // any of the following three options will cause "word" to be un-usable
-    //s.clear();
+    s.clear();
     //s.push_str("m");
     //std:: mem::drop(s);
-    println!("the first word is: {}", word);
+   // println!("the first word is: {}", word);
     println!("the whole string is: {}", s);
 }
