@@ -5,4 +5,7 @@ packages=[
     # the two packages below do not exist on the CI/CD machines at github
     # "cargo-binutils",
     # "librust-cargo-binutils-dev",
+    # ruby stuff
+    "ruby-bundler",
+    "rbenv",
 ]
