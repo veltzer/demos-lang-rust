@@ -9,8 +9,8 @@ fn main() {
     io::stdin().read_line(&mut input).expect("Failed to read input");
 
     // Create a large vector
-    //let v: Vec<i32> = (0..1000*my_pid as i32).collect();
-    let mut v: Vec<i32> = Vec::with_capacity(10000000);
+    let mut v: Vec<i32> = (0..1000*my_pid as i32).collect();
+    //let mut v: Vec<i32> = Vec::with_capacity(10000000);
     println!("Vector created with capacity");
     io::stdin().read_line(&mut input).expect("Failed to read input");
 

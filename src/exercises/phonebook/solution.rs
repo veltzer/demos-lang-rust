@@ -6,6 +6,12 @@ use std::fs::File;
 
 const FILENAME: &str="phonebook.txt";
 
+/*
+fn print_type_of<T>(_: &T) {
+    println!("{}", std::any::type_name::<T>())
+}
+*/
+
 fn read_book() -> HashMap::<String, String> {
 	let mut pb = HashMap::<String, String>::new();
     let file = File::open(FILENAME).unwrap();
@@ -13,9 +19,10 @@ fn read_book() -> HashMap::<String, String> {
     // pb.insert("mark".to_string(), "0505665636".to_string());
     for line in lines {
         let fline = line.unwrap();
+        // print_type_of(dbg!(&fline));
         // let parts: Vec<&str> = fline.strip_suffix("\n").unwrap().split(",").collect();
         let parts: Vec<&str> = fline.split(",").collect();
-        println!("{:?}", parts);
+        // println!("{:?}", parts);
         pb.insert(parts[0].to_string(), parts[1].to_string());
     }
     pb

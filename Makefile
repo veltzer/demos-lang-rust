@@ -69,4 +69,4 @@ $(EXES_REL): %.rel.elf: %.rs
 $(EXES_DBG): %.dbg.elf: %.rs
 	$(info doing [$@])
 	$(Q)rustc $(FLAGS_DBG) $< -o $@
-	$(Q)strip $@
+# $(Q)strip $@
