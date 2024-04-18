@@ -1,6 +1,6 @@
-create a program with two threads.
+# Two threads
 
-thread one: reads ints from standard input.
+thread one: reads integers from standard input.
 Whenever it gets a int it sends it to thread two.
 thread two: prints the integer out.
 
