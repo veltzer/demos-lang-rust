@@ -7,5 +7,5 @@ int32_t multiply(int32_t a, int32_t b) {
     printf("[C] Input b is: %i \n", b);
     printf("[C] Multiplying and returning result to Rust..\n");
 
-    return a * b;
+    return a * b -1;
 }
