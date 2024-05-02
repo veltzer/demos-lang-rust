@@ -1,6 +1,6 @@
 use std::sync::mpsc::*;
 use std::thread;
-use std::time::Duration;
+// use std::time::Duration;
 use std::io::*;
 
 //
@@ -8,20 +8,20 @@ use std::io::*;
 //
 
 fn thread_one(tx: Sender<i32>) {
-    print!("Give me a number: ");
+    print!("thread_one: Give me a number: ");
     stdout().flush().unwrap();
     for line in stdin().lines() {
         let x: i32 = line.unwrap().trim().parse().unwrap();
         tx.send(x).unwrap();
-        thread::sleep(Duration::from_secs(1));
-        print!("Give me a number: ");
+        //thread::sleep(Duration::from_secs(1));
+        print!("thread_one: Give me a number: ");
         stdout().flush().unwrap();
     }
 }
 
 fn thread_two(rx: Receiver<i32>) {
     for msg in rx {
-        println!("Got: {msg}");
+        println!("thread_two: Got: {msg}");
     }
 }
 
