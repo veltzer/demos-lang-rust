@@ -3,13 +3,6 @@
 resolver = "2"
 
 members = [
-	"examples/hello",
-	"examples/goodbye",
-	"examples/ffi_to_c",
-	"examples/inline",
-	"examples/number_of_cores",
-	"examples/affinity",
-	"examples/do_fork",
 	"examples/unicode",
 	"examples/array/error_in_access",
 	"examples/atomics",
@@ -32,7 +25,7 @@ members = [
 	"examples/tuples",
 	"examples/turning_off_warnings",
 	"examples/variables",
-	
+
 	"examples/strings/creating",
 	"examples/strings/ops",
 	"examples/strings/string_types",
@@ -40,7 +33,7 @@ members = [
 	"examples/vectors/as_stack",
 	"examples/vectors/from_iterator",
 	"examples/vectors/print",
-	
+
 	"examples/closure/no_function",
 	"examples/closure/size_of_closure",
 	"examples/closure/with_boxing",
@@ -70,6 +63,12 @@ members = [
 
 	"examples/performance/timeit",
 	"examples/performance/bench",
+
+	"examples/low_level/ffi_to_c",
+	"examples/low_level/inline",
+	"examples/low_level/number_of_cores",
+	"examples/low_level/affinity",
+	"examples/low_level/do_fork",
 ]
 # these are the crates you want to manipulate by default (unless otherwise specified)
 # if you do not specify the "default-members" configuration option then it is all of the
