@@ -224,10 +224,6 @@ name = "from_iterator"
 version = "0.1.0"
 
 [[package]]
-name = "functional"
-version = "0.1.0"
-
-[[package]]
 name = "functions"
 version = "0.1.0"
 
@@ -377,6 +373,10 @@ checksum = "ece97ea872ece730aed82664c424eb4c8291e1ff2480247ccf7409044bc6479f"
 
 [[package]]
 name = "loops"
+version = "0.1.0"
+
+[[package]]
+name = "map"
 version = "0.1.0"
 
 [[package]]
