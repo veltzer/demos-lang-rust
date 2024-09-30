@@ -3,7 +3,6 @@
 resolver = "2"
 
 members = [
-	"examples/unicode",
 	"examples/channels",
 	"examples/comments",
 	"examples/drop",
@@ -21,6 +20,8 @@ members = [
 	"examples/tuples",
 	"examples/turning_off_warnings",
 	"examples/variables",
+
+	"examples/unicode/unicode_simple",
 
 	"examples/strings/creating",
 	"examples/strings/ops",
