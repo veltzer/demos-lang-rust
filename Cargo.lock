@@ -251,19 +251,11 @@ dependencies = [
 ]
 
 [[package]]
-name = "goodbye"
-version = "0.1.0"
-
-[[package]]
 name = "guess"
 version = "0.1.0"
 
 [[package]]
 name = "hashmap"
-version = "0.1.0"
-
-[[package]]
-name = "hello"
 version = "0.1.0"
 
 [[package]]
