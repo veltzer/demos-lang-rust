@@ -30,7 +30,6 @@ members = [
 	"examples/performance",
 	"examples/printing",
 	"examples/refs/ref_to_ref",
-	"examples/structs",
 	"examples/tuples",
 	"examples/turning_off_warnings",
 	"examples/variables",
@@ -65,6 +64,10 @@ members = [
 	"examples/types/types_simple",
 
 	"examples/functional/map",
+
+	"examples/structs/basic_struct",
+	"examples/structs/copy_fields_from_another_struct",
+	"examples/structs/printing_struct",
 ]
 # these are the crates you want to manipulate by default (unless otherwise specified)
 # if you do not specify the "default-members" configuration option then it is all of the
