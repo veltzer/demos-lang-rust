@@ -227,6 +227,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "fold"
+version = "0.1.0"
+
+[[package]]
 name = "fork"
 version = "0.1.21"
 source = "registry+https://github.com/rust-lang/crates.io-index"
