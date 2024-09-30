@@ -7,6 +7,8 @@ use std::io::*;
 
 fn main() {
     let mut shell = String::new();
+    print!("give me a shell: ");
+    std::io::stdout().flush().unwrap();
     stdin().read_line(&mut shell).unwrap();
     shell = shell.strip_suffix("\n").unwrap().to_string();
     // println!("shell is [{shell}]");
