@@ -19,6 +19,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "array_simple"
+version = "0.1.0"
+
+[[package]]
 name = "as_stack"
 version = "0.1.0"
 
@@ -35,10 +39,6 @@ dependencies = [
  "predicates-tree",
  "wait-timeout",
 ]
-
-[[package]]
-name = "atomics"
-version = "0.1.0"
 
 [[package]]
 name = "autocfg"
@@ -534,6 +534,10 @@ dependencies = [
  "crossbeam-channel",
  "rand",
 ]
+
+[[package]]
+name = "prove_atomics"
+version = "0.1.0"
 
 [[package]]
 name = "quote"
