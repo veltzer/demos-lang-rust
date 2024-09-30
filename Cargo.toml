@@ -11,10 +11,9 @@ members = [
 	"examples/affinity",
 	"examples/do_fork",
 	"examples/unicode",
-	"examples/array",
+	"examples/array/error_in_access",
 	"examples/atomics",
 	"examples/channels",
-	"examples/closure",
 	"examples/comments",
 	"examples/drop",
 	"examples/error_handling",
@@ -22,7 +21,6 @@ members = [
 	"examples/functional",
 	"examples/functions",
 	"examples/hashmap",
-	"examples/hello_world",
 	"examples/io",
 	"examples/iterators",
 	"examples/lifetimes",
@@ -33,23 +31,35 @@ members = [
 	"examples/performance",
 	"examples/printing",
 	"examples/refs/ref_to_ref",
-	"examples/strings/creating",
-	"examples/strings/ops",
-	"examples/strings/string_types",
 	"examples/structs",
 	"examples/tuples",
 	"examples/turning_off_warnings",
 	"examples/types",
 	"examples/variables",
+	
+	"examples/strings/creating",
+	"examples/strings/ops",
+	"examples/strings/string_types",
+
 	"examples/vectors/as_stack",
 	"examples/vectors/from_iterator",
 	"examples/vectors/print",
+	
+	"examples/closure/no_function",
+	"examples/closure/size_of_closure",
+	"examples/closure/with_boxing",
+	"examples/closure/with_function",
+	"examples/closure/wrapping_code",
 
 	"exercises/create_iterator_via_closure",
 	"exercises/phonebook",
 	"exercises/two_threads_passing_info",
 	"exercises/users_with_shell",
-	"exercises/producers_consumers", "examples/vectors/as_stack", "examples/vectors/from_iterator", "examples/vectors/print",
+	"exercises/producers_consumers",
+
+	"examples/basic/hello_world",
+	"examples/basic/guess",
+
 ]
 # these are the crates you want to manipulate by default (unless otherwise specified)
 # if you do not specify the "default-members" configuration option then it is all of the
