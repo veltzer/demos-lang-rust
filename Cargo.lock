@@ -94,10 +94,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
-name = "channels"
-version = "0.1.0"
-
-[[package]]
 name = "comments"
 version = "0.1.0"
 
@@ -146,6 +142,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6184e33543162437515c2e2b48714794e37845ec9851711914eec9d308f6ebe8"
 
 [[package]]
+name = "disregard_errors"
+version = "0.1.0"
+
+[[package]]
+name = "disregard_errors_2"
+version = "0.1.0"
+
+[[package]]
 name = "do_fork"
 version = "0.1.0"
 dependencies = [
@@ -190,15 +194,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "error_handling"
-version = "0.1.0"
-
-[[package]]
 name = "error_in_access"
-version = "0.1.0"
-
-[[package]]
-name = "exit_code"
 version = "0.1.0"
 
 [[package]]
@@ -241,10 +237,6 @@ dependencies = [
 
 [[package]]
 name = "from_iterator"
-version = "0.1.0"
-
-[[package]]
-name = "functions"
 version = "0.1.0"
 
 [[package]]
@@ -330,10 +322,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "io"
-version = "0.1.0"
-
-[[package]]
 name = "io-lifetimes"
 version = "1.0.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -343,10 +331,6 @@ dependencies = [
  "libc",
  "windows-sys 0.48.0",
 ]
-
-[[package]]
-name = "iterators"
-version = "0.1.0"
 
 [[package]]
 name = "itertools"
@@ -370,18 +354,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "561d97a539a36e26a9a5fad1ea11a3039a67714694aaa379433e580854bc3dc5"
 
 [[package]]
-name = "lifetimes"
-version = "0.1.0"
-
-[[package]]
 name = "linux-raw-sys"
 version = "0.3.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ece97ea872ece730aed82664c424eb4c8291e1ff2480247ccf7409044bc6479f"
-
-[[package]]
-name = "loops"
-version = "0.1.0"
 
 [[package]]
 name = "map"
@@ -396,14 +372,6 @@ name = "memchr"
 version = "2.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2dffe52ecf27772e601905b7522cb4ef790d2cc203488bbd0e2fe85fcb74566d"
-
-[[package]]
-name = "multi_threading"
-version = "0.1.0"
-
-[[package]]
-name = "mutability"
-version = "0.1.0"
 
 [[package]]
 name = "no_function"
@@ -451,10 +419,6 @@ version = "0.1.0"
 
 [[package]]
 name = "overflow_2"
-version = "0.1.0"
-
-[[package]]
-name = "ownership"
 version = "0.1.0"
 
 [[package]]
@@ -512,10 +476,6 @@ dependencies = [
 
 [[package]]
 name = "print"
-version = "0.1.0"
-
-[[package]]
-name = "printing"
 version = "0.1.0"
 
 [[package]]
@@ -732,11 +692,7 @@ name = "timeit"
 version = "0.1.0"
 
 [[package]]
-name = "tuples"
-version = "0.1.0"
-
-[[package]]
-name = "turning_off_warnings"
+name = "tuples_basic"
 version = "0.1.0"
 
 [[package]]
@@ -764,11 +720,23 @@ name = "unicode_simple"
 version = "0.1.0"
 
 [[package]]
-name = "users_with_shell"
+name = "unused_variables"
 version = "0.1.0"
 
 [[package]]
-name = "variables"
+name = "unused_variables_2"
+version = "0.1.0"
+
+[[package]]
+name = "unused_variables_3"
+version = "0.1.0"
+
+[[package]]
+name = "unused_variables_4"
+version = "0.1.0"
+
+[[package]]
+name = "users_with_shell"
 version = "0.1.0"
 
 [[package]]
