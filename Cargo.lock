@@ -41,6 +41,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "atomic_task_queue"
+version = "0.1.0"
+
+[[package]]
 name = "autocfg"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -255,10 +259,6 @@ name = "guess"
 version = "0.1.0"
 
 [[package]]
-name = "hashmap"
-version = "0.1.0"
-
-[[package]]
 name = "hello_world"
 version = "0.1.0"
 
@@ -381,6 +381,10 @@ version = "0.1.0"
 
 [[package]]
 name = "map"
+version = "0.1.0"
+
+[[package]]
+name = "map_simple"
 version = "0.1.0"
 
 [[package]]
