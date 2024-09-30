@@ -63,10 +63,12 @@ members = [
 	"examples/turning_off_warnings/disregard_errors_2",
 
 	"examples/refs/ref_to_ref",
+	"examples/refs/ref_basic",
+
 	"examples/unicode/unicode_simple",
 	"examples/hashmap/map_simple",
 	"examples/syntax/comments",
-	"examples/tuples/tuples_basic",
+	"examples/tuples/tuples_basic", "examples/refs/ref_basic",
 ]
 # these are the crates you want to manipulate by default (unless otherwise specified)
 # if you do not specify the "default-members" configuration option then it is all of the
