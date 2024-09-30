@@ -113,6 +113,10 @@ name = "create_iterator_via_closure"
 version = "0.1.0"
 
 [[package]]
+name = "creating"
+version = "0.1.0"
+
+[[package]]
 name = "crossbeam-channel"
 version = "0.5.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -418,6 +422,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "ops"
+version = "0.1.0"
+
+[[package]]
 name = "ownership"
 version = "0.1.0"
 
@@ -620,7 +628,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "strings"
+name = "string_types"
 version = "0.1.0"
 
 [[package]]
