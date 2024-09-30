@@ -3,30 +3,17 @@
 resolver = "2"
 
 members = [
-	"examples/channels",
-	"examples/comments",
-	"examples/drop",
-	"examples/error_handling",
-	"examples/exit_code",
-	"examples/functions",
-	"examples/io",
-	"examples/iterators",
-	"examples/lifetimes",
-	"examples/loops",
-	"examples/multi_threading",
-	"examples/mutability",
-	"examples/ownership",
-	"examples/printing",
-	"examples/tuples",
-	"examples/turning_off_warnings",
-	"examples/variables",
-
-	"examples/unicode/unicode_simple",
+	"exercises/create_iterator_via_closure",
+	"exercises/phonebook",
+	"exercises/two_threads_passing_info",
+	"exercises/users_with_shell",
+	"exercises/producers_consumers",
 
 	"examples/strings/creating",
 	"examples/strings/ops",
 	"examples/strings/string_types",
 
+	"examples/vectors/drop",
 	"examples/vectors/as_stack",
 	"examples/vectors/from_iterator",
 	"examples/vectors/print",
@@ -36,12 +23,6 @@ members = [
 	"examples/closure/with_boxing",
 	"examples/closure/with_function",
 	"examples/closure/wrapping_code",
-
-	"exercises/create_iterator_via_closure",
-	"exercises/phonebook",
-	"exercises/two_threads_passing_info",
-	"exercises/users_with_shell",
-	"exercises/producers_consumers",
 
 	"examples/basic/hello_world",
 	"examples/basic/guess",
@@ -74,9 +55,18 @@ members = [
 	"examples/array/error_in_access",
 	"examples/array/array_simple",
 
-	"examples/refs/ref_to_ref",
+	"examples/turning_off_warnings/unused_variables",
+	"examples/turning_off_warnings/unused_variables_2",
+	"examples/turning_off_warnings/unused_variables_3",
+	"examples/turning_off_warnings/unused_variables_4",
+	"examples/turning_off_warnings/disregard_errors",
+	"examples/turning_off_warnings/disregard_errors_2",
 
-	"examples/hashmap/map_simple", "examples/atomics/atomic_task_queue", "examples/functional/fold",
+	"examples/refs/ref_to_ref",
+	"examples/unicode/unicode_simple",
+	"examples/hashmap/map_simple",
+	"examples/syntax/comments",
+	"examples/tuples/tuples_basic",
 ]
 # these are the crates you want to manipulate by default (unless otherwise specified)
 # if you do not specify the "default-members" configuration option then it is all of the
