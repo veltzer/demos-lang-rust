@@ -67,13 +67,14 @@ members = [
 	"examples/low_level/do_fork",
 
 	"examples/atomics/prove_atomics",
+	"examples/atomics/atomic_task_queue",
 
 	"examples/array/error_in_access",
 	"examples/array/array_simple",
 
 	"examples/refs/ref_to_ref",
 
-	"examples/hashmap/map_simple",
+	"examples/hashmap/map_simple", "examples/atomics/atomic_task_queue",
 ]
 # these are the crates you want to manipulate by default (unless otherwise specified)
 # if you do not specify the "default-members" configuration option then it is all of the
