@@ -278,6 +278,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fed44880c466736ef9a5c5b5facefb5ed0785676d0c02d612db14e54f0d84286"
 
 [[package]]
+name = "i32_is_default"
+version = "0.1.0"
+
+[[package]]
 name = "inline"
 version = "0.1.0"
 dependencies = [
@@ -430,6 +434,14 @@ name = "ops"
 version = "0.1.0"
 
 [[package]]
+name = "overflow"
+version = "0.1.0"
+
+[[package]]
+name = "overflow_2"
+version = "0.1.0"
+
+[[package]]
 name = "ownership"
 version = "0.1.0"
 
@@ -496,6 +508,10 @@ version = "0.1.0"
 
 [[package]]
 name = "printing"
+version = "0.1.0"
+
+[[package]]
+name = "printing_types"
 version = "0.1.0"
 
 [[package]]
@@ -712,7 +728,7 @@ name = "two_threads_passing_info"
 version = "0.1.0"
 
 [[package]]
-name = "types"
+name = "types_simple"
 version = "0.1.0"
 
 [[package]]
