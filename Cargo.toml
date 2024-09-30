@@ -1,0 +1,74 @@
+[workspace]
+
+members = [
+	"examples/hello",
+	"examples/goodbye",
+	"examples/ffi_to_c",
+	"examples/inline",
+	"examples/number_of_cores",
+	"examples/affinity",
+	"examples/do_fork",
+	"examples/unicode",
+	"examples/array",
+	"examples/atomics",
+	"examples/channels",
+	"examples/closure",
+	"examples/comments",
+	"examples/drop",
+	"examples/error_handling",
+	"examples/exit_code",
+	"examples/functional",
+	"examples/functions",
+	"examples/hashmap",
+	"examples/hello_world",
+	"examples/io",
+	"examples/iterators",
+	"examples/lifetimes",
+	"examples/loops",
+	"examples/multi_threading",
+	"examples/mutability",
+	"examples/ownership",
+	"examples/performance",
+	"examples/printing",
+	"examples/refs/ref_to_ref",
+	"examples/strings",
+	"examples/structs",
+	"examples/tuples",
+	"examples/turning_off_warnings",
+	"examples/types",
+	"examples/variables",
+	"examples/vectors/as_stack",
+	"examples/vectors/from_iterator",
+	"examples/vectors/print",
+
+	"exercises/create_iterator_via_closure",
+	"exercises/phonebook",
+	"exercises/two_threads_passing_info",
+	"exercises/users_with_shell",
+	"exercises/producers_consumers", "examples/vectors/as_stack", "examples/vectors/from_iterator", "examples/vectors/print",
+]
+# these are the crates you want to manipulate by default (unless otherwise specified)
+# if you do not specify the "default-members" configuration option then it is all of the
+# above mentioned under "members"
+# default-members = [
+#     "hello",
+#     "goodbye",
+#     "ffi_to_c",
+#     "inline",
+#     "number_of_cores",
+# ]
+# default-run = "hello"
+
+[profile.dev]
+# all the following options are to reduce binary sizes
+# see https://www.youtube.com/watch?v=b2qe3L4BX-Y
+strip=true
+debug=false
+opt-level="s"
+lto=true
+codegen-units=1
+
+# [package]
+# name="toplevel"
+# version="0.1.0"
+# default-run="hello"

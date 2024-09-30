@@ -32,7 +32,7 @@ Q:=@
 endif # DO_MKDBG
 
 SRC:=src
-SOURCES:=$(shell find $(SRC) -name "*.rs" -and -type f)
+SOURCES:=$(shell find $(SRC) -type f -and -name "*.rs")
 EXES_DBG:=$(addsuffix .dbg.elf, $(basename $(SOURCES)))
 EXES_REL:=$(addsuffix .rel.elf, $(basename $(SOURCES)))
 FLAGS_REL:=-Dwarnings -O -C debuginfo=0
@@ -64,7 +64,7 @@ all: $(ALL)
 .PHONY: clean
 clean:
 	$(info doing [$@])
-	$(Q)rm -f $(EXES)
+	$(Q)rm -f $(ALL)
 .PHONY: clean_hard
 clean_hard:
 	$(info doing [$@])
