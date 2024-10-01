@@ -93,8 +93,36 @@ members = [
 	"examples/syntax/syntax_comments",
 	"examples/syntax/syntax_for",
 
+	"examples/ownership/ownership_borrow",
+	"examples/ownership/ownership_two_owners",
+	"examples/ownership/ownership_take_and_return",
+
 	"examples/tuples/tuples_basic",
 	"examples/tuples/tuples_features",
+
+	"examples/functions/functions_name_of_current_function",
+	"examples/functions/functions_no_return_type",
+	"examples/functions/functions_pass_non_mutable",
+	"examples/functions/functions_basic",
+
+	"examples/io/io_input_from_user",
+	"examples/io/io_read_file_line_by_line",
+	"examples/io/io_read_whole_file",
+	"examples/io/io_write_file_basic",
+
+	"examples/loops/loops_set_type",
+	"examples/loops/loops_simple",
+	"examples/loops/loops_with_step",
+
+	"examples/mutability/mutability_cant_change_var",
+	"examples/mutability/mutability_inference",
+
+	"examples/printing/printing_flush",
+	"examples/printing/printing_numbers",
+
+	"examples/lifetimes/lifetimes_array_slices",
+	"examples/lifetimes/lifetimes_differennt",
+	"examples/lifetimes/lifetimes_string_slices",
 ]
 
 # these are the crates you want to manipulate by default (unless otherwise specified)
