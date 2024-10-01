@@ -61,6 +61,6 @@ fn main() {
 
     // 9. Tuple structs
     struct Color(i32, i32, i32);
-    let red = Color(255, 0, 0);
-    println!("9. Tuple struct: Red value is {}", red.0);
+    let c = Color(255, 0, 0);
+    println!("9. Tuple struct: values are {}, {}, {}", c.0, c.1, c.2);
 }
