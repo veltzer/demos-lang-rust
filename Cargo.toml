@@ -64,12 +64,31 @@ members = [
 
 	"examples/refs/ref_to_ref",
 	"examples/refs/ref_basic",
+	
+	"examples/channels/channels_types",
+	"examples/channels/channels_usage",
+	
+	"examples/multi_threading/threads_functional",
+	"examples/multi_threading/threads_simple",
+	"examples/multi_threading/threads_pass_parameters",
+	"examples/multi_threading/threads_return_value",
 
+	"examples/iterators/iter_direct",
+	"examples/iterators/iter_for_loop",
+
+	"examples/exit_code/exit_code_on_expect",
+	"examples/exit_code/exit_code_on_panic",
+	"examples/exit_code/exit_code_on_unwrap",
+	"examples/exit_code/exit_code_return",
+
+	# do more than one example per folder
 	"examples/unicode/unicode_simple",
 	"examples/hashmap/map_simple",
 	"examples/syntax/comments",
-	"examples/tuples/tuples_basic", "examples/refs/ref_basic",
+	"examples/tuples/tuples_basic",
+
 ]
+
 # these are the crates you want to manipulate by default (unless otherwise specified)
 # if you do not specify the "default-members" configuration option then it is all of the
 # above mentioned under "members"
