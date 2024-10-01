@@ -771,6 +771,10 @@ name = "tuples_basic"
 version = "0.1.0"
 
 [[package]]
+name = "tuples_features"
+version = "0.1.0"
+
+[[package]]
 name = "two_threads_passing_info"
 version = "0.1.0"
 
