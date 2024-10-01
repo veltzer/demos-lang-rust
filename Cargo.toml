@@ -123,6 +123,14 @@ members = [
 	"examples/lifetimes/lifetimes_array_slices",
 	"examples/lifetimes/lifetimes_differennt",
 	"examples/lifetimes/lifetimes_string_slices",
+
+	"examples/error_handling/errors_expect",
+	"examples/error_handling/errors_panic",
+	"examples/error_handling/errors_print",
+	"examples/error_handling/errors_result",
+	"examples/error_handling/errors_return_code",
+	"examples/error_handling/errors_return_poassible_error",
+	"examples/error_handling/errors_wrap",
 ]
 
 # these are the crates you want to manipulate by default (unless otherwise specified)
