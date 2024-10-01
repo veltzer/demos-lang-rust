@@ -11,16 +11,13 @@ DO_EXECS:=1
 DO_MD_MDL:=1
 # do spell check on all?
 DO_MD_ASPELL:=1
+# do you want to build everything with cargo?
+DO_CARGO:=1
 
 ########
 # code #
 ########
 ALL:=
-
-# dependency on the makefile itself
-ifeq ($(DO_ALLDEP),1)
-.EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
-endif # DO_ALLDEP
 
 # silent stuff
 ifeq ($(DO_MKDBG),1)
@@ -33,6 +30,8 @@ endif # DO_MKDBG
 
 SRC:=src
 SOURCES:=$(shell find $(SRC) -type f -and -name "*.rs")
+CARGO_SRC:=$(shell find examples exercises -type f -and -name "*.rs")
+CARGO_TOML:=$(shell find examples exercises -type f -and -name "Cargo.toml")
 EXES_DBG:=$(addsuffix .dbg.elf, $(basename $(SOURCES)))
 EXES_REL:=$(addsuffix .rel.elf, $(basename $(SOURCES)))
 FLAGS_REL:=-Dwarnings -O -C debuginfo=0
@@ -55,6 +54,10 @@ ifeq ($(DO_MD_ASPELL),1)
 ALL+=$(MD_ASPELL)
 endif # DO_MD_ASPELL
 
+ifeq ($(DO_CARGO),1)
+ALL+=out/cargo.stamp
+endif # DO_CARGO
+
 #########
 # rules #
 #########
@@ -72,6 +75,8 @@ clean_hard:
 .PHONY: debug
 debug:
 	$(info SOURCES is $(SOURCES))
+	$(info CARGO_SRC is $(CARGO_SRC))
+	$(info CARGO_TOML is $(CARGO_TOML))
 	$(info EXES_DBG is $(EXES_DBG))
 	$(info EXES_REL is $(EXES_REL))
 	$(info MD_SRC is $(MD_SRC))
@@ -83,6 +88,11 @@ debug:
 spell_many:
 	$(info doing [$@])
 	$(Q)aspell_many.sh $(MD_SRC)
+
+out/cargo.stamp: $(CARGO_SRC) $(CARGO_TOML)
+	$(info doing [$@])
+	$(Q)cargo build --quiet
+	$(Q)pymakehelper touch_mkdir $@
 
 ############
 # patterns #
@@ -103,3 +113,10 @@ $(MD_ASPELL): out/%.aspell: %.md .aspell.conf .aspell.en.prepl .aspell.en.pws
 	$(info doing [$@])
 	$(Q)aspell --conf-dir=. --conf=.aspell.conf list < $< | pymakehelper error_on_print sort -u
 	$(Q)pymakehelper touch_mkdir $@
+
+##########
+# alldep #
+##########
+ifeq ($(DO_ALLDEP),1)
+.EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
+endif # DO_ALLDEP
