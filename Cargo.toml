@@ -64,10 +64,10 @@ members = [
 
 	"examples/refs/ref_to_ref",
 	"examples/refs/ref_basic",
-	
+
 	"examples/channels/channels_types",
 	"examples/channels/channels_usage",
-	
+
 	"examples/multi_threading/threads_functional",
 	"examples/multi_threading/threads_simple",
 	"examples/multi_threading/threads_pass_parameters",
@@ -81,12 +81,16 @@ members = [
 	"examples/exit_code/exit_code_on_unwrap",
 	"examples/exit_code/exit_code_return",
 
-	# do more than one example per folder
+	"examples/variables/variables_unused_directive",
+	"examples/variables/variables_unused_underscore",
+
 	"examples/unicode/unicode_simple",
+	"examples/unicode/unicode_normalize",
+
+	# do more than one example per folder
 	"examples/hashmap/map_simple",
 	"examples/syntax/comments",
 	"examples/tuples/tuples_basic",
-
 ]
 
 # these are the crates you want to manipulate by default (unless otherwise specified)
