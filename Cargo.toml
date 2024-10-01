@@ -90,8 +90,10 @@ members = [
 	"examples/hashmap/map_simple",
 	"examples/hashmap/map_unify",
 
+	"examples/syntax/syntax_comments",
+	"examples/syntax/syntax_for",
+
 	# do more than one example per folder
-	"examples/syntax/comments",
 	"examples/tuples/tuples_basic",
 ]
 

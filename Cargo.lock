@@ -683,6 +683,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "syntax_for"
+version = "0.1.0"
+
+[[package]]
 name = "target-lexicon"
 version = "0.11.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
