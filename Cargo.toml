@@ -93,8 +93,8 @@ members = [
 	"examples/syntax/syntax_comments",
 	"examples/syntax/syntax_for",
 
-	# do more than one example per folder
 	"examples/tuples/tuples_basic",
+	"examples/tuples/tuples_features",
 ]
 
 # these are the crates you want to manipulate by default (unless otherwise specified)
