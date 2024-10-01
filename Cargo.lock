@@ -94,6 +94,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
+name = "channels_types"
+version = "0.1.0"
+
+[[package]]
+name = "channels_usage"
+version = "0.1.0"
+
+[[package]]
 name = "comments"
 version = "0.1.0"
 
@@ -195,6 +203,22 @@ dependencies = [
 
 [[package]]
 name = "error_in_access"
+version = "0.1.0"
+
+[[package]]
+name = "exit_code_on_expect"
+version = "0.1.0"
+
+[[package]]
+name = "exit_code_on_panic"
+version = "0.1.0"
+
+[[package]]
+name = "exit_code_on_unwrap"
+version = "0.1.0"
+
+[[package]]
+name = "exit_code_return"
 version = "0.1.0"
 
 [[package]]
@@ -331,6 +355,14 @@ dependencies = [
  "libc",
  "windows-sys 0.48.0",
 ]
+
+[[package]]
+name = "iter_direct"
+version = "0.1.0"
+
+[[package]]
+name = "iter_for_loop"
+version = "0.1.0"
 
 [[package]]
 name = "itertools"
@@ -692,8 +724,39 @@ dependencies = [
 ]
 
 [[package]]
+name = "threads_functional"
+version = "0.1.0"
+
+[[package]]
+name = "threads_pass_parameters"
+version = "0.1.0"
+
+[[package]]
+name = "threads_return_value"
+version = "0.1.0"
+
+[[package]]
+name = "threads_simple"
+version = "0.1.0"
+
+[[package]]
 name = "timeit"
 version = "0.1.0"
+
+[[package]]
+name = "tinyvec"
+version = "1.8.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "445e881f4f6d382d5f27c034e25eb92edd7c784ceab92a0937db7f2e9471b938"
+dependencies = [
+ "tinyvec_macros",
+]
+
+[[package]]
+name = "tinyvec_macros"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1f3ccbac311fea05f86f61904b462b55fb3df8837a366dfc601a0161d0532f20"
 
 [[package]]
 name = "tuples_basic"
@@ -720,6 +783,22 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e5464a87b239f13a63a501f2701565754bae92d243d4bb7eb12f6d57d2269bf4"
 
 [[package]]
+name = "unicode-normalization"
+version = "0.1.24"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5033c97c4262335cded6d6fc3e5c18ab755e1a3dc96376350f3d8e9f009ad956"
+dependencies = [
+ "tinyvec",
+]
+
+[[package]]
+name = "unicode_normalize"
+version = "0.1.0"
+dependencies = [
+ "unicode-normalization",
+]
+
+[[package]]
 name = "unicode_simple"
 version = "0.1.0"
 
@@ -741,6 +820,14 @@ version = "0.1.0"
 
 [[package]]
 name = "users_with_shell"
+version = "0.1.0"
+
+[[package]]
+name = "variables_unused_directive"
+version = "0.1.0"
+
+[[package]]
+name = "variables_unused_underscore"
 version = "0.1.0"
 
 [[package]]
