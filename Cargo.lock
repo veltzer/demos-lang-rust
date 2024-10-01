@@ -206,6 +206,34 @@ name = "error_in_access"
 version = "0.1.0"
 
 [[package]]
+name = "errors_expect"
+version = "0.1.0"
+
+[[package]]
+name = "errors_panic"
+version = "0.1.0"
+
+[[package]]
+name = "errors_print"
+version = "0.1.0"
+
+[[package]]
+name = "errors_result"
+version = "0.1.0"
+
+[[package]]
+name = "errors_return_code"
+version = "0.1.0"
+
+[[package]]
+name = "errors_return_poassible_error"
+version = "0.1.0"
+
+[[package]]
+name = "errors_wrap"
+version = "0.1.0"
+
+[[package]]
 name = "exit_code_on_expect"
 version = "0.1.0"
 
