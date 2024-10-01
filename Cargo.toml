@@ -87,8 +87,10 @@ members = [
 	"examples/unicode/unicode_simple",
 	"examples/unicode/unicode_normalize",
 
-	# do more than one example per folder
 	"examples/hashmap/map_simple",
+	"examples/hashmap/map_unify",
+
+	# do more than one example per folder
 	"examples/syntax/comments",
 	"examples/tuples/tuples_basic",
 ]
