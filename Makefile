@@ -91,7 +91,7 @@ spell_many:
 
 out/cargo.stamp: $(CARGO_SRC) $(CARGO_TOML)
 	$(info doing [$@])
-	$(Q)cargo build --quiet
+	$(Q)cargo build --quiet --jobs $$(nproc)
 	$(Q)pymakehelper touch_mkdir $@
 
 ############
