@@ -264,6 +264,22 @@ name = "from_iterator"
 version = "0.1.0"
 
 [[package]]
+name = "function_basic"
+version = "0.1.0"
+
+[[package]]
+name = "functions_name_of_current_function"
+version = "0.1.0"
+
+[[package]]
+name = "functions_no_return_type"
+version = "0.1.0"
+
+[[package]]
+name = "functions_pass_non_mutable"
+version = "0.1.0"
+
+[[package]]
 name = "getrandom"
 version = "0.2.15"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -357,6 +373,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "io_input_from_user"
+version = "0.1.0"
+
+[[package]]
+name = "io_read_file_line_by_line"
+version = "0.1.0"
+
+[[package]]
+name = "io_read_whole_file"
+version = "0.1.0"
+
+[[package]]
+name = "io_write_file_basic"
+version = "0.1.0"
+
+[[package]]
 name = "iter_direct"
 version = "0.1.0"
 
@@ -386,10 +418,34 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "561d97a539a36e26a9a5fad1ea11a3039a67714694aaa379433e580854bc3dc5"
 
 [[package]]
+name = "lifetimes_array_slices"
+version = "0.1.0"
+
+[[package]]
+name = "lifetimes_differennt"
+version = "0.1.0"
+
+[[package]]
+name = "lifetimes_string_slices"
+version = "0.1.0"
+
+[[package]]
 name = "linux-raw-sys"
 version = "0.3.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ece97ea872ece730aed82664c424eb4c8291e1ff2480247ccf7409044bc6479f"
+
+[[package]]
+name = "loops_set_type"
+version = "0.1.0"
+
+[[package]]
+name = "loops_simple"
+version = "0.1.0"
+
+[[package]]
+name = "loops_with_step"
+version = "0.1.0"
 
 [[package]]
 name = "map"
@@ -408,6 +464,14 @@ name = "memchr"
 version = "2.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2dffe52ecf27772e601905b7522cb4ef790d2cc203488bbd0e2fe85fcb74566d"
+
+[[package]]
+name = "mutability_cant_change_var"
+version = "0.1.0"
+
+[[package]]
+name = "mutability_inference"
+version = "0.1.0"
 
 [[package]]
 name = "no_function"
@@ -455,6 +519,18 @@ version = "0.1.0"
 
 [[package]]
 name = "overflow_2"
+version = "0.1.0"
+
+[[package]]
+name = "ownership_borrow"
+version = "0.1.0"
+
+[[package]]
+name = "ownership_take_and_return"
+version = "0.1.0"
+
+[[package]]
+name = "ownership_two_owners"
 version = "0.1.0"
 
 [[package]]
@@ -512,6 +588,14 @@ dependencies = [
 
 [[package]]
 name = "print"
+version = "0.1.0"
+
+[[package]]
+name = "printing_flush"
+version = "0.1.0"
+
+[[package]]
+name = "printing_numbers"
 version = "0.1.0"
 
 [[package]]
