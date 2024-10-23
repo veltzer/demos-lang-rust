@@ -9,6 +9,7 @@ members = [
 	"exercises/users_with_shell",
 	"exercises/producers_consumers",
 	"exercises/priority_queue",
+	"exercises/library_management",
 
 	"examples/strings/creating",
 	"examples/strings/ops",
