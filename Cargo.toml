@@ -8,6 +8,7 @@ members = [
 	"exercises/two_threads_passing_info",
 	"exercises/users_with_shell",
 	"exercises/producers_consumers",
+	"exercises/priority_queue",
 
 	"examples/strings/creating",
 	"examples/strings/ops",
