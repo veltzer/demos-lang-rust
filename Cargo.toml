@@ -10,6 +10,10 @@ members = [
 	"exercises/producers_consumers",
 	"exercises/priority_queue",
 	"exercises/library_management",
+	"exercises/calculator",
+	"exercises/grade_calculator",
+	"exercises/fibonacci",
+	"exercises/temperature_converter",
 
 	"examples/strings/creating",
 	"examples/strings/ops",
