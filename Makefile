@@ -36,7 +36,7 @@ EXES_DBG:=$(addsuffix .dbg.elf, $(basename $(SOURCES)))
 EXES_REL:=$(addsuffix .rel.elf, $(basename $(SOURCES)))
 FLAGS_REL:=-Dwarnings -O -C debuginfo=0
 FLAGS_DBG:=-g -Dwarnings
-MD_SRC:=$(shell find src -type f -and -name "*.md")
+MD_SRC:=$(shell find src exercises examples -type f -and -name "*.md")
 MD_BAS:=$(basename $(MD_SRC))
 MD_MDL:=$(addprefix out/,$(addsuffix .mdl,$(MD_BAS)))
 MD_ASPELL:=$(addprefix out/,$(addsuffix .aspell,$(MD_BAS)))

@@ -1,4 +1,4 @@
-personal_ws-1.1 en 999 
+personal_ws-1.1 en 1011 
 AARRR
 ACLs
 ADPlus
@@ -46,6 +46,7 @@ BitBucket
 BitKeeper
 Bitbake
 Bitfield
+Blandy
 Boltzman
 Bootlin
 Bootloaders
@@ -177,6 +178,7 @@ Employability
 EnableAutoConfiguration
 Endedness
 Extjs
+FFI
 FFT
 FS
 FSx
@@ -215,6 +217,7 @@ Gitflow
 Github
 Gitk
 Gitlab
+Gjengset
 Globals
 Globbing
 Gmail
@@ -234,6 +237,7 @@ Heisenbugs
 Hiera
 HiveQL
 Hopfield
+Huy's
 Hystrix
 IAAS
 IAM
@@ -304,6 +308,7 @@ LFI
 LGPL
 LINQ
 LSTM
+Leonora
 Leumi
 Lex
 Lippman
@@ -390,6 +395,7 @@ OpenTelemetry
 Openwrt
 Operationalizing
 OpsWorks
+Orendorff
 OzCode
 PAAS
 PAPI
@@ -463,6 +469,8 @@ Rng
 Rollup
 Runnable
 Runtime
+Rustaceans
+Rustonomicon
 SAAS
 SCM
 SCONS
@@ -550,6 +558,7 @@ Textract
 Tika
 TimeDelta
 TimeSys
+Tindall
 Tizen
 Tokenizer
 Tokenizers
@@ -707,6 +716,7 @@ dojo
 du
 dynamiccast
 eXtreme
+eg
 elasticsearch
 elif
 enum
@@ -833,6 +843,7 @@ mv
 nLSTM
 namespace
 namespaces
+nd
 netlink
 netstat
 ng
@@ -877,6 +888,7 @@ ptr
 ptrace
 ptxdist
 pushd
+pwnthebox
 py
 pylint
 pypi
