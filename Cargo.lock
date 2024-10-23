@@ -82,6 +82,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1fd0f2584146f6f2ef48085050886acf353beff7305ebd1ae69500e27c67f64b"
 
 [[package]]
+name = "calculator"
+version = "0.1.0"
+
+[[package]]
 name = "cc"
 version = "1.0.79"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -266,6 +270,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "fibonacci"
+version = "0.1.0"
+
+[[package]]
 name = "float-cmp"
 version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -317,6 +325,10 @@ dependencies = [
  "libc",
  "wasi",
 ]
+
+[[package]]
+name = "grade_calculator"
+version = "0.1.0"
 
 [[package]]
 name = "guess"
@@ -811,6 +823,10 @@ name = "target-lexicon"
 version = "0.11.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "422045212ea98508ae3d28025bc5aaa2bd4a9cdaecd442a08da2ee620ee9ea95"
+
+[[package]]
+name = "temperature_coverter"
+version = "0.1.0"
 
 [[package]]
 name = "tempfile"

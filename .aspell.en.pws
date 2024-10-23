@@ -1,4 +1,4 @@
-personal_ws-1.1 en 1011 
+personal_ws-1.1 en 1014 
 AARRR
 ACLs
 ADPlus
@@ -821,6 +821,7 @@ md
 medoids
 mem
 memmap
+memoization
 microk
 milli
 mk
@@ -937,6 +938,7 @@ spinlocks
 splunk
 sqlmap
 staticcast
+stdin
 strace
 struct
 stylesheets
@@ -999,6 +1001,7 @@ webhook
 webkit
 weblogic
 webserver
+whitespace
 wic
 worktree
 worktrees
