@@ -5,15 +5,15 @@ use std::cmp::Ordering;
 struct Task {
     priority: u8,
     description: String,
-    sequence: usize,  // To maintain FIFO order for same priority
+    sequence: usize,
 }
 
 impl Ord for Task {
     fn cmp(&self, other: &Self) -> Ordering {
         // First compare by priority (reversed because BinaryHeap is a max-heap)
-        // Then by sequence number (lower sequence = came first)
+        // Then by sequence number (also reversed to maintain FIFO in the heap)
         other.priority.cmp(&self.priority)
-            .then(self.sequence.cmp(&other.sequence))
+            .then(other.sequence.cmp(&self.sequence))  // Changed this line
     }
 }
 
@@ -61,7 +61,13 @@ impl TaskManager {
     }
 
     fn list_all_tasks(&self) -> Vec<&Task> {
-        self.tasks.iter().collect()
+        // Convert to vec and sort to guarantee order
+        let mut tasks: Vec<&Task> = self.tasks.iter().collect();
+        tasks.sort_by(|a, b| {
+            a.priority.cmp(&b.priority)
+                .then(a.sequence.cmp(&b.sequence))
+        });
+        tasks
     }
 }
 
@@ -132,7 +138,7 @@ mod tests {
         let tasks = manager.list_all_tasks();
         assert_eq!(tasks.len(), 3);
         
-        // Tasks should be in priority order (1 highest)
+        // Tasks should be in priority order (1 lowest to 5 highest)
         let priorities: Vec<u8> = tasks.iter().map(|t| t.priority).collect();
         assert_eq!(priorities, vec![1, 2, 3]);
     }
