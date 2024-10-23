@@ -1,4 +1,4 @@
-# How to call a C function from Rust 🦀☎️
+# How to call a C function from Rust
 
 I was working on a Rust project where we needed to interact with code written in C.
 
@@ -42,7 +42,7 @@ extern "C" {
 
 ### 2. Call the C function from Rust
 
-Any use of foreign function is considered unsafe because the Rust compiler can't guarantee memory safety in foreign code. 
+Any use of foreign function is considered unsafe because the Rust compiler can't guarantee memory safety in foreign code.
 So in our main Rust file (`src/main.rs`) we call the function in an `unsafe` block, then pass in two `i32` integers, and print the result.
 
 ```rust
@@ -55,21 +55,27 @@ unsafe {
 
 First we compile our `multiply.c` file using a C compiler:
 
-    clang src/multiply.c -c
+```sh
+clang src/multiply.c -c
+```
 
 The `-c` flag tells the C compiler to output a "object file (`.o`)" instead of an executable program. So it creates a `multiply.o` file that we can use as a shared dynamic library in our Rust code.
 
 Then we compile our program using the Rust compiler:
 
-    rustc src/main.rs -l multiply.o -L .
+```sh
+rustc src/main.rs -l multiply.o -L .
+```
 
 The `-l multiply.o` option tells the Rust compiler to link the shared library.
 The `-L .` option tells the Rust compiler to look for libraries in the current directory.
 
 The compiler creates an executable named `main` which we can run:
 
-    ./main
-    Result: 25000
+```sh
+./main
+Result: 25000
+```
 
 ### 4. Automate 🤖
 
@@ -94,14 +100,15 @@ fn main() {
 
 And now we can use Cargo to build both the C and Rust code and run the program:
 
-    cargo run
-
+```sh
+cargo run
+```
 
 ## Notes
 
 - From [Rust 1.64.0](https://blog.rust-lang.org/2022/09/22/Rust-1.64.0.html#c-compatible-ffi-types-in-core-and-alloc) it is now recommended to use `core::ffi` instead of `std::os::raw` to access C types. The latter is now an alias to types in the `core::ffi` module. `core` is also available in places where the Rust standard library (`std`) is not, like [embedded projects](https://docs.rust-embedded.org/book/intro/no-std.html).
 
-- Mapping out functions manully using `extern` is fine for small projects, but as soon as you are dealing with a bigger library or codebase, you want to take a look at `bindgen`. It can automatically generate the bindings for C or C++ libraries, making using them in Rust a lot easier. See [the `bindgen` User Guide](https://rust-lang.github.io/rust-bindgen/).
+- Mapping out functions manually using `extern` is fine for small projects, but as soon as you are dealing with a bigger library or code base, you want to take a look at `bindgen`. It can automatically generate the bindings for C or C++ libraries, making using them in Rust a lot easier. See [the `bindgen` User Guide](https://rust-lang.github.io/rust-bindgen/).
 
 - We can control how our code is linked using the [`#[link()]` attribute.](https://doc.rust-lang.org/reference/items/external-blocks.html#the-link-attribute). It allows us to specify or rename functions and change the type of linking to use, eg. to static:
 
@@ -122,9 +129,9 @@ And now we can use Cargo to build both the C and Rust code and run the program:
 
 - [Build Scripts - The Cargo Book](https://doc.rust-lang.org/cargo/reference/build-scripts.html)
 
-- [Deciphering Rust’s `#[no_mangle]` - pwnthebox.net](https://www.pwnthebox.net/rust/2020/11/01/deciphering-no-mangle.html)
+- [Deciphering Rust’s #[no_mangle] - pwnthebox.net](https://www.pwnthebox.net/rust/2020/11/01/deciphering-no-mangle.html)
 
-- [Rust FFI: Sending strings to the outside world | Huy's Blog](https://snacky.blog/en/string-ffi-rust.html)
+- [Rust FFI: Sending strings to the outside world - Huy's Blog](https://snacky.blog/en/string-ffi-rust.html)
 
 - [The Rust FFI Omnibus](http://jakegoulding.com/rust-ffi-omnibus/)
 
