@@ -167,3 +167,6 @@ codegen-units=1
 # name="toplevel"
 # version="0.1.0"
 # default-run="hello"
+
+# [build]
+# jobs = 8  # Or number of CPU cores
