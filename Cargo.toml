@@ -14,6 +14,7 @@ members = [
 	"exercises/grade_calculator",
 	"exercises/fibonacci",
 	"exercises/temperature_converter",
+	"exercises/guessing_game",
 
 	"examples/strings/creating",
 	"examples/strings/ops",
