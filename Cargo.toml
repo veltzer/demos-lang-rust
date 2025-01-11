@@ -160,6 +160,8 @@ debug=false
 # opt-level="s"
 lto=true
 codegen-units=1
+# prefer dynamic linking to static linking, stopped working
+# prefer-dynamic = true
 
 # [package]
 # name="toplevel"
