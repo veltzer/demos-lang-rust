@@ -157,7 +157,7 @@ members = [
 # see https://www.youtube.com/watch?v=b2qe3L4BX-Y
 strip=true
 debug=false
-opt-level="s"
+# opt-level="s"
 lto=true
 codegen-units=1
 
