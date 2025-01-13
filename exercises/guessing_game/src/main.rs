@@ -1,5 +1,5 @@
 use std::io;
-use std::io::Write;
+use std::io::{Write, Error};
 use rand::Rng;
 use std::cmp::Ordering;
 
@@ -14,16 +14,15 @@ fn main() {
         io::stdout().flush().unwrap();
         
         // Create a new String to store the guess
-        let mut guess = String::new();
+        let mut guess: String = String::new();
         
         // Read user input
-        io::stdin()
-            .read_line(&mut guess)
-            .expect("Failed to read line");
+        let _r :Result<usize, Error > = io::stdin().read_line(&mut guess);
+            //.expect("Failed to read line");
         
         // Convert guess to number, handle invalid input
         let guess: i32 = match guess.trim().parse() {
-            Ok(num) => num,
+            Ok(i) => i,
             Err(_) => {
                 println!("Please enter a valid number!");
                 continue;
