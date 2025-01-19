@@ -13,7 +13,7 @@ fn print_type_of<T>(_: &T) {
 */
 
 fn read_book() -> HashMap::<String, String> {
-	let mut pb = HashMap::<String, String>::new();
+    let mut pb = HashMap::<String, String>::new();
     let file = File::open(FILENAME).unwrap();
     let lines = BufReader::new(file).lines(); 
     // pb.insert("mark".to_string(), "0505665636".to_string());
@@ -29,9 +29,9 @@ fn read_book() -> HashMap::<String, String> {
 }
 
 fn print(pb: &HashMap<String, String>) {
-	for (name, phone) in pb {
-		println!("{name}: {phone}");
-	}
+    for (name, phone) in pb {
+            println!("{name}: {phone}");
+    }
 }
 
 fn write(pb: &HashMap<String, String>) {
@@ -39,6 +39,7 @@ fn write(pb: &HashMap<String, String>) {
     let mut file = File::create(FILENAME).unwrap();
 	for (name, phone) in pb {
 		writeln!(&mut file, "{name},{phone}").unwrap();
+		// writeln!(&mut file, "{},{}", name, phone).unwrap();
     }
 }
 
@@ -74,7 +75,8 @@ fn remove(pb: &mut HashMap<String, String>) {
     let mut name: String = String::new();
     stdin().read_line(&mut name).unwrap();
     name = name.strip_suffix("\n").unwrap().to_string();
-    pb.remove(&name);
+    // pb.remove(&name);
+    println!("Result is {:?}", pb.remove(&name));
 }
 
 fn add(pb: &mut HashMap<String, String>) {
