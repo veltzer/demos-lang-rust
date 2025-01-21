@@ -5,13 +5,20 @@
 // References:
 // - https://stackoverflow.com/questions/30253422/how-to-print-structs-and-arrays
 
-#[allow(dead_code)]
 
+#[allow(dead_code)]
+#[derive(Debug)]
+struct InnerData {
+    some_uint: u32,
+}
+
+#[allow(dead_code)]
 #[derive(Debug)]
 struct Data {
     some_bool: bool,
     some_float: f64,
     some_int: i32,
+    inner: InnerData,
 }
 
 fn main() {
@@ -19,6 +26,9 @@ fn main() {
         some_bool: true,
         some_float: 10.3,
         some_int: 80,
+        inner: InnerData {
+            some_uint: 56,
+        },
     };
     println!("{:?}", var);
 }

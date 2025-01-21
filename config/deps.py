@@ -8,6 +8,8 @@ packages=[
     # ruby stuff
     "ruby-bundler",
     "rbenv",
+    # for debugging
+    "rustfilt",
     # for spelling
     "aspell",
 ]
