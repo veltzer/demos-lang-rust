@@ -1,3 +1,7 @@
+"""
+os level dependencies for this project
+"""
+
 packages=[
     "rustc", # this provides "rustdoc" as well as "rustc"
     "cargo", # manages projects in rust
