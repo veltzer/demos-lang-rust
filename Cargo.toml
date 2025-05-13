@@ -15,6 +15,7 @@ members = [
 	"exercises/fibonacci",
 	"exercises/temperature_converter",
 	"exercises/guessing_game",
+	"exercises/nth_word",
 
 	"examples/strings/creating",
 	"examples/strings/ops",
