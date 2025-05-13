@@ -16,6 +16,7 @@ members = [
 	"exercises/temperature_converter",
 	"exercises/guessing_game",
 	"exercises/nth_word",
+	"exercises/book_catalog",
 
 	"examples/strings/creating",
 	"examples/strings/ops",
