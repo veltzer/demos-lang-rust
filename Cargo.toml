@@ -18,6 +18,7 @@ members = [
 	"exercises/guessing_game",
 	"exercises/nth_word",
 	"exercises/book_catalog",
+	"exercises/iterator_two_iterators",
 
 	"examples/strings/creating",
 	"examples/strings/ops",
