@@ -3,7 +3,8 @@
 resolver = "2"
 
 members = [
-	"exercises/create_iterator_via_closure",
+	"exercises/iterator_closure",
+	"exercises/iterator_oo",
 	"exercises/phonebook",
 	"exercises/two_threads_passing_info",
 	"exercises/users_with_shell",

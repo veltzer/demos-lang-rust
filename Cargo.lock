@@ -129,10 +129,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "create_iterator_via_closure"
-version = "0.1.0"
-
-[[package]]
 name = "creating"
 version = "0.1.0"
 
@@ -445,6 +441,14 @@ version = "0.1.0"
 
 [[package]]
 name = "iter_for_loop"
+version = "0.1.0"
+
+[[package]]
+name = "iterator_closure"
+version = "0.1.0"
+
+[[package]]
+name = "iterator_oo"
 version = "0.1.0"
 
 [[package]]
