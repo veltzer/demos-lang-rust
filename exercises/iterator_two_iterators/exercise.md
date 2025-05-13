@@ -10,3 +10,6 @@ Hints:
 * To implement an iterator you need a `fn next(&mut self) -> Option<Self::Item>` method.
     where `Item` is the type that the iterator returns.
 * For the entire exercise the type of the iterator can be hardcoded and be i32.
+
+Simplification:
+* Make the constructor of your ChainedIterator receive two &Vec<i32>.
