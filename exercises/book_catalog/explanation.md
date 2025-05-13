@@ -1,4 +1,5 @@
-Explanation
+# Explanation
+
 This solution demonstrates several key concepts of Rust structs:
 
 Struct Definition: We defined a Book struct with two String fields for title and author.
@@ -6,7 +7,6 @@ Implementation Block: The impl Book block adds methods to the struct:
 
 The new function creates a new Book instance with the provided title and author
 It serves as a constructor and converts the string slices to owned Strings
-
 
 Display Trait: By implementing the fmt::Display trait, we enable formatted printing of our struct using the {} placeholder in println!.
 Instance Creation: In the main function, we create two book instances using our constructor method.
