@@ -1,6 +1,6 @@
 use std::fmt;
 
-// Define the Book struct
+#[derive(Debug)]
 struct Book {
     title: String,
     author: String,
@@ -17,7 +17,6 @@ impl Book {
     }
 }
 
-// Implement the Display trait for pretty printing
 impl fmt::Display for Book {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         write!(f, "\"{}\" by {}", self.title, self.author)
@@ -31,6 +30,8 @@ fn main() {
     
     // Print the books using the Display trait implementation
     println!("My book catalog:");
+    println!("1. {:?}", book1);
+    println!("2. {:?}", book2);
     println!("1. {}", book1);
     println!("2. {}", book2);
 }
