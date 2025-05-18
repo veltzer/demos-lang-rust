@@ -1,4 +1,4 @@
-personal_ws-1.1 en 1018 
+personal_ws-1.1 en 1021 
 AARRR
 ACLs
 ADPlus
@@ -78,6 +78,7 @@ CTest
 Captcha
 Catenating
 Centroid
+ChainedIterator
 Charsets
 Checksums
 ClearCase
@@ -757,7 +758,9 @@ gettimeofday
 gitignore
 glibc
 gperf
+hardcoded
 hashSetOf
+hashmap
 hotplug
 icc
 imagePullPolicy
