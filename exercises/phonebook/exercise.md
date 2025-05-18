@@ -15,12 +15,12 @@ with the following format:
 Read the book at the beginning
 
 Show to following menu:
-    1 print the phonebook
-    2 search for a name
-    3 remove a name
-    4 add name and phone (only in RAM)
-    5 write phonebook to disk.
-    6 exit
+1. print the phonebook
+2. search for a name
+3. remove a name
+4. add name and phone (only in RAM)
+5. write phonebook to disk.
+6. exit
 
 Implement every option in its own function.
 
