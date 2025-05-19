@@ -142,6 +142,8 @@ members = [
 	"examples/error_handling/errors_return_code",
 	"examples/error_handling/errors_return_possible_error",
 	"examples/error_handling/errors_wrap",
+
+	"examples/standard_traits/drop_trait",
 ]
 
 # these are the crates you want to manipulate by default (unless otherwise specified)
