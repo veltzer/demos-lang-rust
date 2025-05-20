@@ -23,6 +23,10 @@ name = "array_simple"
 version = "0.1.0"
 
 [[package]]
+name = "as_ref"
+version = "0.1.0"
+
+[[package]]
 name = "as_stack"
 version = "0.1.0"
 
@@ -824,6 +828,10 @@ dependencies = [
 
 [[package]]
 name = "size_of_closure"
+version = "0.1.0"
+
+[[package]]
+name = "sized"
 version = "0.1.0"
 
 [[package]]
