@@ -145,7 +145,6 @@ members = [
 
 	"examples/standard_traits/drop_trait",
 	"examples/standard_traits/as_ref",
-	"examples/standard_traits/sized",
 ]
 
 # these are the crates you want to manipulate by default (unless otherwise specified)
