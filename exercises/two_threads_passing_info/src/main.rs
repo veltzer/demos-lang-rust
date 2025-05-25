@@ -27,8 +27,8 @@ fn thread_two(rx: Receiver<i32>) {
 
 fn main() {
     let (tx, rx) = channel::<i32>();
-    let thread_join_handle1 = thread::spawn(|| {thread_one(tx); });
-    let thread_join_handle2 = thread::spawn(|| {thread_two(rx); });
+    let thread_join_handle1 = thread::spawn(move || {thread_one(tx); });
+    let thread_join_handle2 = thread::spawn(move || {thread_two(rx); });
     thread_join_handle1.join().unwrap();
     thread_join_handle2.join().unwrap();
 }
