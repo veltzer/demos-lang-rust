@@ -17,8 +17,6 @@ DO_CARGO:=1
 ########
 # code #
 ########
-ALL:=
-
 # silent stuff
 ifeq ($(DO_MKDBG),1)
 Q:=
@@ -27,6 +25,8 @@ else # DO_MKDBG
 Q:=@
 #.SILENT:
 endif # DO_MKDBG
+
+ALL:=
 
 SRC:=src
 SOURCES:=$(shell find $(SRC) -type f -and -name "*.rs")
@@ -74,6 +74,7 @@ clean_hard:
 	$(Q)git clean -qffxd
 .PHONY: debug
 debug:
+	$(info ALL is $(ALL))
 	$(info SOURCES is $(SOURCES))
 	$(info CARGO_SRC is $(CARGO_SRC))
 	$(info CARGO_TOML is $(CARGO_TOML))
@@ -83,15 +84,13 @@ debug:
 	$(info MD_BAS is $(MD_BAS))
 	$(info MD_ASPELL is $(MD_ASPELL))
 	$(info MD_MDL is $(MD_MDL))
-
 .PHONY: spell_many
 spell_many:
 	$(info doing [$@])
 	$(Q)aspell_many.sh $(MD_SRC)
-
 out/cargo.stamp: $(CARGO_SRC) $(CARGO_TOML)
 	$(info doing [$@])
-	$(Q)cargo build --jobs $$(nproc)
+	$(Q)pymakehelper only_print_on_error cargo build --jobs $$(nproc)
 	$(Q)pymakehelper touch_mkdir $@
 # $(Q)cargo build --quiet --jobs $$(nproc)
 
