@@ -15,9 +15,9 @@ enum ConfigError {
 fn read_config() -> Result<String> {
     fs::read_to_string("config.txt")
         .map_err(|e| match e.kind() {
-            std::io::ErrorKind::NotFound => ConfigError::FileNotFound,
-            std::io::ErrorKind::PermissionDenied => ConfigError::PermissionDenied,
-            _ => ConfigError::Corrupted,
+            std::io::ErrorKind::NotFound => ConfigError::FileNotFound.into(),
+            std::io::ErrorKind::PermissionDenied => ConfigError::PermissionDenied.into(),
+            _ => ConfigError::Corrupted.into(),
         })
         .context("Failed to load application configuration")
 }
@@ -28,7 +28,7 @@ fn main() {
         Err(e) => {
             println!("Error occurred: {}", e);
             
-            // Check for specific error types using match
+            // Check for specific error types using downcast_ref
             if let Some(config_error) = e.downcast_ref::<ConfigError>() {
                 match config_error {
                     ConfigError::FileNotFound => {
