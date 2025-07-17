@@ -134,6 +134,7 @@ members = [
 	"examples/lifetimes/lifetimes_array_slices",
 	"examples/lifetimes/lifetimes_differennt",
 	"examples/lifetimes/lifetimes_string_slices",
+	"examples/lifetimes/lifetimes_using",
 
 	"examples/error_handling/errors_expect",
 	"examples/error_handling/errors_panic",
