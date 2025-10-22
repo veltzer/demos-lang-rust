@@ -12,7 +12,7 @@ packages=[
     "lld",
     "lld-18",
     "cargo-doc",
-    "cargo-1.80-doc",
+    "cargo-1.85-doc",
     # "cargo-binutils",
     # "librust-cargo-binutils-dev",
     # ruby stuff
