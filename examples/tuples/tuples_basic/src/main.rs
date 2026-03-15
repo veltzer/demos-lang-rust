@@ -8,4 +8,5 @@ fn main() {
     let mut _one = x.2;
     _one = _one + 1;
     x.2 = x.2 + 1;
+    println!("{:?}", x);
 }
