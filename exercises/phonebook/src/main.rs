@@ -1,10 +1,10 @@
 // This is a solution to the phonebook exercise
 
 use std::collections::HashMap;
-use std::io::{stdout,stdin,Write,BufReader,BufRead};
 use std::fs::File;
+use std::io::{stdin, stdout, BufRead, BufReader, Write};
 
-const FILENAME: &str="phonebook.txt";
+const FILENAME: &str = "exercises/phonebook/phonebook.txt";
 
 /*
 fn print_type_of<T>(_: &T) {
@@ -12,16 +12,16 @@ fn print_type_of<T>(_: &T) {
 }
 */
 
-fn read_book() -> HashMap::<String, String> {
+fn read_book() -> HashMap<String, String> {
     let mut pb = HashMap::<String, String>::new();
     let file = File::open(FILENAME).unwrap();
-    let lines = BufReader::new(file).lines(); 
+    let lines = BufReader::new(file).lines();
     // pb.insert("mark".to_string(), "0505665636".to_string());
-    for line in lines {
-        let fline = line.unwrap();
+    for line_or_error in lines {
+        let line: String = line_or_error.unwrap();
         // print_type_of(dbg!(&fline));
         // let parts: Vec<&str> = fline.strip_suffix("\n").unwrap().split(",").collect();
-        let parts: Vec<&str> = fline.split(",").collect();
+        let parts: Vec<&str> = line.split(",").collect();
         // println!("{:?}", parts);
         pb.insert(parts[0].to_string(), parts[1].to_string());
     }
@@ -30,16 +30,16 @@ fn read_book() -> HashMap::<String, String> {
 
 fn print(pb: &HashMap<String, String>) {
     for (name, phone) in pb {
-            println!("{name}: {phone}");
+        println!("{name}: {phone}");
     }
 }
 
 fn write(pb: &HashMap<String, String>) {
     println!("in write...");
     let mut file = File::create(FILENAME).unwrap();
-	for (name, phone) in pb {
-		writeln!(&mut file, "{name},{phone}").unwrap();
-		// writeln!(&mut file, "{},{}", name, phone).unwrap();
+    for (name, phone) in pb {
+        writeln!(&mut file, "{name},{phone}").unwrap();
+        // writeln!(&mut file, "{},{}", name, phone).unwrap();
     }
 }
 
@@ -75,7 +75,6 @@ fn remove(pb: &mut HashMap<String, String>) {
     let mut name: String = String::new();
     stdin().read_line(&mut name).unwrap();
     name = name.strip_suffix("\n").unwrap().to_string();
-    // pb.remove(&name);
     println!("Result is {:?}", pb.remove(&name));
 }
 
@@ -99,13 +98,13 @@ fn main() {
     loop {
         let selection = print_menu();
         match selection {
-            1=> print(&phonebook),
-            2=> search(&phonebook),
-            3=> remove(&mut phonebook),
-            4=> add(&mut phonebook),
-            5=> write(&phonebook),
-            6=> break,
+            1 => print(&phonebook),
+            2 => search(&phonebook),
+            3 => remove(&mut phonebook),
+            4 => add(&mut phonebook),
+            5 => write(&phonebook),
+            6 => break,
             _ => println!("didn't get you..."),
         }
-    };
+    }
 }
