@@ -142,6 +142,7 @@ members = [
 	"examples/error_handling/errors_result",
 	"examples/error_handling/errors_return_code",
 	"examples/error_handling/errors_return_possible_error",
+	"examples/error_handling/errors_unwrap",
 	"examples/error_handling/errors_wrap",
 
 	"examples/standard_traits/drop_trait",
