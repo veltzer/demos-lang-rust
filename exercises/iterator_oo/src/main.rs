@@ -9,7 +9,7 @@ impl RangeIterator {
     fn new(start: i32, end: i32) -> Self {
         RangeIterator {
             current: start,
-            end: end,
+            end,
         }
     }
 }
