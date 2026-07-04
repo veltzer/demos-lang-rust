@@ -43,7 +43,7 @@ impl TaskManager {
     }
 
     fn add_task(&mut self, priority: u8, description: String) {
-        if priority < 1 || priority > 5 {
+        if !(1..=5).contains(&priority) {
             panic!("Priority must be between 1 and 5");
         }
 

@@ -30,7 +30,7 @@ fn main() {
         };
         
         // Check if guess is in valid range
-        if guess < 0 || guess > 100 {
+        if !(0..=100).contains(&guess) {
             println!("Please enter a number between 0 and 100!");
             continue;
         }
