@@ -69,10 +69,12 @@ fn main() {
     let sum: i32 = range2.iter().sum();
     println!("Sum: {}", sum);
     
-    // Manual iteration with while let
+    // Manual iteration with while let (deliberately calling next() by hand
+    // to demonstrate the iterator protocol, hence the allow below).
     let range3 = Range::new(5, 8);
     println!("\nManual iteration:");
     let mut iter = range3.iter();
+    #[allow(clippy::while_let_on_iterator)]
     while let Some(value) = iter.next() {
         println!("{}", value);
     }
