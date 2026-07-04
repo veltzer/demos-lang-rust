@@ -33,19 +33,13 @@ fn main() {
             return;
         }
     };
-    
-    println!("Enter operation (+, -, *, /):");
-    let mut op = String::new();
-    io::stdin()
-        .read_line(&mut op)
-        .expect("Failed to read operation");
-    
+
     println!("Enter second number:");
     let mut num2 = String::new();
     io::stdin()
         .read_line(&mut num2)
         .expect("Failed to read second number");
-    
+
     let num2: f64 = match num2.trim().parse() {
         Ok(num) => num,
         Err(_) => {
@@ -53,7 +47,13 @@ fn main() {
             return;
         }
     };
-    
+
+    println!("Enter operation (+, -, *, /):");
+    let mut op = String::new();
+    io::stdin()
+        .read_line(&mut op)
+        .expect("Failed to read operation");
+
     match calculate(num1, num2, op.trim()) {
         Ok(result) => println!("{} {} {} = {}", num1, op.trim(), num2, result),
         Err(e) => println!("Error: {}", e)
@@ -73,7 +73,6 @@ mod tests {
     }
 
     #[test]
-    #[ignore]
     fn test_division_by_zero() {
         assert!(calculate(5.0, 0.0, "/").is_err());
     }

@@ -30,8 +30,11 @@ fn main() {
     
     // Print the books using the Display trait implementation
     println!("My book catalog:");
-    println!("1. {:?}", book1);
-    println!("2. {:?}", book2);
     println!("1. {}", book1);
     println!("2. {}", book2);
+
+    // The Debug derive is also available for developer-facing output
+    println!("\nDebug view:");
+    println!("1. {:?}", book1);
+    println!("2. {:?}", book2);
 }

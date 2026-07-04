@@ -7,7 +7,9 @@ struct ChainedIterator<'a> {
 }
 
 impl<'a> ChainedIterator<'a> {
-    // Constructor that takes references to two vectors
+    // Constructor that takes references to two vectors.
+    // The exercise deliberately specifies `&Vec<i32>` (not `&[i32]`).
+    #[allow(clippy::ptr_arg)]
     fn new(first: &'a Vec<i32>, second: &'a Vec<i32>) -> Self {
         ChainedIterator {
             first_iter: first.iter(),
