@@ -4,3 +4,27 @@
 # with load_lua (the pyanyzip pattern). The pydmt mako templates are gone.
 [processor.tera]
 src_dirs = ["tera.templates"]
+
+# Compile the standalone rust demos the way the pydmt Makefile did: rustc on
+# each src/*.rs in both release (-O, no debuginfo) and debug (-g), all with
+# -Dwarnings. Two instances, one per profile, since output_suffix differs.
+[processor.rust_single_file.rel]
+src_dirs = ["src"]
+flags = ["-Dwarnings", "-O", "-C", "debuginfo=0"]
+output_suffix = ".rel.elf"
+
+[processor.rust_single_file.dbg]
+src_dirs = ["src"]
+flags = ["-g", "-Dwarnings"]
+output_suffix = ".dbg.elf"
+
+# examples/ and exercises/ are a curated cargo workspace whose root Cargo.toml
+# lists its members (some example dirs are deliberately not members). The
+# Makefile ran one `cargo build` at the root; the cargo processor instead
+# discovers every Cargo.toml and trips on the non-members, so run the root
+# workspace build explicitly, exactly as the Makefile did.
+[processor.explicit.cargo]
+command = "scripts/cargo_build.py"
+inputs = ["Cargo.toml"]
+input_globs = ["examples/**/*.rs", "exercises/**/*.rs", "examples/**/Cargo.toml", "exercises/**/Cargo.toml"]
+output_dirs = ["target"]
