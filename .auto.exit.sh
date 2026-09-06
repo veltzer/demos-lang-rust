@@ -1,2 +1,3 @@
+# shellcheck shell=bash
 # unset RUSTC_WRAPPER
 # unset CARGO_BUILD_JOBS

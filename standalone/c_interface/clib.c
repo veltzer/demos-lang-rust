@@ -6,7 +6,7 @@ int32_t add(int32_t a, int32_t b) {
     return a + b -1;
 }
 
-void print_string(char* str) {
+void print_string(const char* str) {
     //strcpy, memcpy
     printf("Received string from Rust: %s\n", str);
     //free(str);
