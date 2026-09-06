@@ -25,7 +25,8 @@ src_dirs = ["tera.templates"]
 # ─── markdown ────────────────────────────────────────────────────────────────
 
 [processor.rumdl]
-src_dirs = ["src", "exercises"]
+src_dirs = ["src", "exercises", "examples/low_level/ffi_to_c"]
+src_files = ["README.md"]
 
 [processor.zspell]
 src_dirs = ["src", "exercises"]
@@ -45,7 +46,7 @@ src_dirs = ["src", "scripts", "config", "exercises"]
 
 [processor.shellcheck]
 src_dirs = ["scripts", "src", "exercises", "config"]
-args = ["--severity=error", "--shell=bash"]
+src_files = [".auto.enter.sh", ".auto.exit.sh"]
 
 # ─── lua ─────────────────────────────────────────────────────────────────────
 
@@ -74,3 +75,13 @@ output_dirs = ["target"]
 # lint the GitHub Actions workflow files with actionlint
 [processor.actionlint]
 src_dirs = [".github/workflows"]
+
+# ─── c / c++ ─────────────────────────────────────────────────────────────────
+
+[processor.cppcheck]
+src_dirs = ["examples/low_level/ffi_to_c/src", "standalone/c_interface"]
+args = [
+	"--error-exitcode=1",
+	"--enable=warning,style,performance,portability",
+	"--inline-suppr",
+]
