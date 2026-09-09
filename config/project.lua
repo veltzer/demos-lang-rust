@@ -1,3 +1,3 @@
-NAME = "demos-rust"
+NAME = "demos-lang-rust"
 DESCRIPTION_SHORT = "Demos for the rust language"
 KEYWORDS = {"rust"}
