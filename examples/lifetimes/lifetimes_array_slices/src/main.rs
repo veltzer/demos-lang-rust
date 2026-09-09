@@ -9,7 +9,7 @@ fn get_slice(a: &[i32]) -> &[i32] {
             return &a[0..i];
         }
     }
-    &a[..]
+    a
 }
 
 fn main() {

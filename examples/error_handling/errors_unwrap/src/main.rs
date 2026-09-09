@@ -15,8 +15,8 @@ fn main() {
     let good: i32 = "42".parse().unwrap();
     println!("parsed the number {good}");
 
-    // Option::unwrap on the Some path: the vector has a first element.
-    let numbers = vec![1, 2, 3];
+    // Option::unwrap on the Some path: the array has a first element.
+    let numbers = [1, 2, 3];
     let first = numbers.first().unwrap();
     println!("first element is {first}");
 

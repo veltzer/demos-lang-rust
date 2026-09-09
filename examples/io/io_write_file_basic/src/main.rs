@@ -9,5 +9,6 @@ use std::io::Write;
 
 fn main() {
     let mut w = File::create("/tmp/test.txt").unwrap();
-    writeln!(&mut w, "formatted {}", "arguments").unwrap();
+    let what = "arguments";
+    writeln!(&mut w, "formatted {what}").unwrap();
 }

@@ -4,10 +4,7 @@
 // - https://doc.rust-lang.org/std/vec/struct.Vec.html
 
 fn main() {
-    let mut v = Vec::<i32>::new();
-    v.push(1);
-    v.push(3);
-    v.push(5);
+    let v = vec![1, 3, 5];
     println!("{:?}", v);
     for x in &v {
         println!("{x}");

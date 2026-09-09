@@ -1,3 +1,6 @@
+// This example teaches fold itself, so Example 1 stays a fold even though
+// clippy would rather see the equivalent .sum().
+#[allow(clippy::unnecessary_fold)]
 fn main() {
     // Example 1: Sum of all elements in a vector
     let numbers = vec![1, 2, 3, 4, 5];
@@ -6,11 +9,11 @@ fn main() {
 
     // Example 2: Finding the maximum value in a vector
     let numbers = vec![3, 1, 4, 1, 5, 9, 2, 6];
-    let max = numbers.iter().fold(std::i32::MIN, |acc, &x| acc.max(x));
+    let max = numbers.iter().fold(i32::MIN, |acc, &x| acc.max(x));
     println!("Maximum value in {:?} is {}", numbers, max);
 
     // Example 3: Concatenating strings
-    let words = vec!["Hello", "world", "from", "Rust"];
+    let words = ["Hello", "world", "from", "Rust"];
     let sentence = words.iter().fold(String::new(), |acc, &x| acc + x + " ");
     println!("Concatenated string: {}", sentence.trim());
 
@@ -21,7 +24,7 @@ fn main() {
         y: i32,
     }
 
-    let points = vec![
+    let points = [
         Point { x: 1, y: 2 },
         Point { x: 3, y: 4 },
         Point { x: 5, y: 6 },
@@ -35,7 +38,7 @@ fn main() {
     println!("Sum of all points: {:?}", sum_point);
 
     // Example 5: Counting occurrences of elements
-    let chars = vec!['a', 'b', 'a', 'c', 'b', 'a'];
+    let chars = ['a', 'b', 'a', 'c', 'b', 'a'];
     let char_counts = chars.iter().fold(std::collections::HashMap::new(), |mut acc, &c| {
         *acc.entry(c).or_insert(0) += 1;
         acc

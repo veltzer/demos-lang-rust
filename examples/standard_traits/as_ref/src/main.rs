@@ -1,3 +1,6 @@
+// Passing &String is deliberate here: the point is that AsRef<str> accepts
+// String, &str and &String alike, so clippy's shorter form is not wanted.
+#[allow(clippy::needless_borrows_for_generic_args)]
 fn main() {
     // Function works with different string types via AsRef<str>
     print_length(String::from("Hello"));  // String

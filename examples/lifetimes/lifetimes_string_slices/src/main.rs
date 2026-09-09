@@ -17,7 +17,7 @@ fn first_word(s: &String) -> &str {
 
 fn main() {
     let mut s = String::from("hello world");
-    s.push_str("!"); // so the compiler won't complain that s is mut
+    s.push('!'); // so the compiler won't complain that s is mut
     let word = first_word(&s);
     println!("the first word is: {}", word);
     // any of the following three options will cause "word" to be un-usable

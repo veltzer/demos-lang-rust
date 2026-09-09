@@ -9,6 +9,9 @@ macro_rules! function {
     }}
 }
 
+// The immediately-called closure is the point: it shows what function!()
+// reports from inside a closure.
+#[allow(clippy::redundant_closure_call)]
 pub fn main() {
     (|| {
         mod module {

@@ -10,7 +10,7 @@ fn main() {
 fn choose_one_of_two(s1: String, s2: String) -> String {
     let my_pid = process::id();
     println!("my_pid = {}", my_pid);
-    if my_pid % 2 == 0 {
+    if my_pid.is_multiple_of(2) {
         s1
     } else {
         s2

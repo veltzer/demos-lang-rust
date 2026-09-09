@@ -6,7 +6,7 @@ fn main() {
     let _five_hundred = x.0;
     let _six_point_four = x.1;
     let mut _one = x.2;
-    _one = _one + 1;
-    x.2 = x.2 + 1;
+    _one += 1;
+    x.2 += 1;
     println!("{:?}", x);
 }

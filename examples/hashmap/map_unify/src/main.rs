@@ -28,7 +28,7 @@ fn main() {
     println!("Unified using entry API (sum on conflict): {:?}", unified2);
 
     // Method 3: Using iterators and collect (overwrites values from map1 with those from map2)
-    let unified3: HashMap<_, _> = map1.clone().into_iter().chain(map2.clone().into_iter()).collect();
+    let unified3: HashMap<_, _> = map1.clone().into_iter().chain(map2.clone()).collect();
     println!("Unified using iterators and collect: {:?}", unified3);
 
     // Method 4: Using iterators with fold (allows custom logic for conflicts)

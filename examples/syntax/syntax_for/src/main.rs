@@ -45,7 +45,7 @@ fn main() {
 
     // 7. Iterating over a mutable collection
     println!("7. Iterating over a mutable collection:");
-    let mut mutable_numbers = vec![1, 2, 3, 4, 5];
+    let mut mutable_numbers = [1, 2, 3, 4, 5];
     for num in mutable_numbers.iter_mut() {
         *num *= 2;
         print!("{} ", num);
