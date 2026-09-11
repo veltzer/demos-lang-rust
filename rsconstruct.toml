@@ -71,11 +71,16 @@ src_files = [".rumdl.toml", "Cargo.toml", "rsconstruct.toml"]
 # Makefile ran one `cargo build` at the root; the cargo processor instead
 # discovers every Cargo.toml and trips on the non-members, so run the root
 # workspace build explicitly, exactly as the Makefile did.
+# cargo owns target/ and its own incremental cache, so target/ is NOT declared
+# as an output here: rsconstruct hardlink-restores cached outputs read-only,
+# which leaves target/ unwritable and breaks the next `cargo` run. The declared
+# output is a small stamp the build script writes on success; cargo manages
+# target/ itself.
 [processor.explicit.cargo]
 command = "scripts/cargo_build.py"
 inputs = ["Cargo.toml"]
 input_globs = ["examples/**/*.rs", "exercises/**/*.rs", "examples/**/Cargo.toml", "exercises/**/Cargo.toml"]
-output_dirs = ["target"]
+output_files = ["out/cargo.stamp"]
 
 # lint the GitHub Actions workflow files with actionlint
 [processor.actionlint]
