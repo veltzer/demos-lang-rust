@@ -61,7 +61,7 @@ src_dirs = ["config"]
 
 [processor.taplo]
 src_dirs = ["examples", "exercises"]
-src_files = [".rumdl.toml", "Cargo.toml", "rsconstruct.toml"]
+src_files = [".rumdl.toml", "Cargo.toml", "pyproject.toml", "rsconstruct.toml"]
 
 # Compile the standalone rust demos the way the pydmt Makefile did: rustc on
 # each src/*.rs in both release (-O, no debuginfo) and debug (-g), all with
