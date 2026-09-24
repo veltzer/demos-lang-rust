@@ -6,9 +6,9 @@ use rand::Rng;
 use crossbeam_channel::{bounded, Sender, Receiver};
 
 fn producer(id: usize, tx: Sender<i32>) {
-    let mut rng = rand::thread_rng();
+    let mut rng = rand::rng();
     loop {
-        let number: i32 = rng.gen();
+        let number: i32 = rng.random();
         if tx.send(number).is_err() {
             break;
         }

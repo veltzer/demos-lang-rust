@@ -4,4 +4,4 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-fork = "0.1.21"
+fork = "0.10.0"

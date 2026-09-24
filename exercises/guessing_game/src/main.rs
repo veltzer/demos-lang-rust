@@ -7,7 +7,7 @@ fn main() {
     println!("Welcome to the Guessing Game!");
     
     // Generate random number between 0 and 100
-    let secret_number = rand::thread_rng().gen_range(0..101);
+    let secret_number = rand::rng().random_range(0..101);
     
     loop {
         print!("Please input your guess (0-100): ");
