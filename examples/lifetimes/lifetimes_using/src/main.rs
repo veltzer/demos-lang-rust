@@ -1,4 +1,4 @@
-use rand::Rng;
+use rand::RngExt;
 
 fn random_choose<'a>(option1: &'a String, option2: &'a String) -> &'a String {
     if rand::rng().random_bool(0.5) { option1 } else { option2 }

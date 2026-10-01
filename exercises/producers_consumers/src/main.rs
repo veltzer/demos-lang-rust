@@ -2,7 +2,7 @@ use std::thread;
 use std::time::Duration;
 use std::fs::File;
 use std::io::Write;
-use rand::Rng;
+use rand::RngExt;
 use crossbeam_channel::{bounded, Sender, Receiver};
 
 fn producer(id: usize, tx: Sender<i32>) {
