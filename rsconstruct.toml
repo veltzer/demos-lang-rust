@@ -81,7 +81,7 @@ input_globs = ["examples/**/*.rs", "exercises/**/*.rs", "examples/**/Cargo.toml"
 output_files = ["out/cargo.stamp"]
 
 # lint the GitHub Actions workflow files with actionlint
-[processor.checker.actionlint]
+[processor.checker.iactionlint]
 src_dirs = [".github/workflows"]
 
 # ─── c / c++ ─────────────────────────────────────────────────────────────────
