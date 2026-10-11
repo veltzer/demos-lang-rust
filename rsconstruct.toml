@@ -46,7 +46,7 @@ src_dirs = ["src", "scripts", "config", "exercises"]
 
 # ─── shell ───────────────────────────────────────────────────────────────────
 
-[processor.checker.shellcheck]
+[processor.checker.ishellcheck]
 src_dirs = ["scripts", "src", "exercises", "config"]
 src_files = [".auto.enter.sh", ".auto.exit.sh"]
 
