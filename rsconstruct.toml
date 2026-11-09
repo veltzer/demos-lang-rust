@@ -70,6 +70,10 @@ command = "scripts/cargo_build.py"
 inputs = ["Cargo.toml", "Cargo.lock"]
 input_globs = ["examples/**/*.rs", "exercises/**/*.rs", "examples/**/Cargo.toml", "exercises/**/Cargo.toml"]
 output_files = ["out/cargo.stamp"]
+# The script runs cargo: under the sandbox that brings cargo's own places
+# (target/, Cargo.lock) and the network, which cargo needs for crates and
+# rustup for the toolchain rust-toolchain.toml pins.
+required_tools = ["cargo"]
 
 # lint the GitHub Actions workflow files with actionlint
 [processor.checker.iactionlint]
