@@ -10,6 +10,7 @@
 - Work with loop control
 
 ### The Task
+
 Create a program that calculates the nth Fibonacci number:
 1 Accept a position number n
 2 Calculate the nth Fibonacci number
@@ -49,6 +50,7 @@ Create a program that calculates the nth Fibonacci number:
 - Unclear error messages
 
 ### Extension Ideas
+
 1 Implement recursive solution
 2 Add memoization
 3 Calculate multiple numbers
@@ -71,6 +73,7 @@ Create a program that calculates the nth Fibonacci number:
 - Algorithm analysis
 
 ### Assessment Criteria
+
 Your solution should demonstrate:
 1 Correct sequence generation
 2 Efficient implementation

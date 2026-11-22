@@ -10,6 +10,7 @@
 - Practice arithmetic operations
 
 ### The Task
+
 Create a command-line calculator that:
 1. Accepts two numbers
 2. Accepts an operation (+, -, *, /)
@@ -48,6 +49,7 @@ Create a command-line calculator that:
 - Poor code organization
 
 ### Extension Ideas
+
 1 Add more operations (power, modulo, etc.)
 2 Support decimal numbers
 3 Add memory functions
@@ -70,6 +72,7 @@ Create a command-line calculator that:
 - Command-line utilities
 
 ### Assessment Criteria
+
 Your solution should demonstrate:
 1 Correct calculations
 2 Comprehensive error handling

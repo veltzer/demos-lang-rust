@@ -10,6 +10,7 @@
 - Practice type conversion
 
 ### The Task
+
 Create a program that converts temperatures from Fahrenheit to Celsius. The program should:
 1. Prompt the user for input
 2. Accept a temperature in Fahrenheit
@@ -17,6 +18,7 @@ Create a program that converts temperatures from Fahrenheit to Celsius. The prog
 4. Display the result with one decimal place
 
 ### Key Concepts Covered
+
 1 **User Input**
     - Using `std::io`
     - Reading from stdin
@@ -44,6 +46,7 @@ Create a program that converts temperatures from Fahrenheit to Celsius. The prog
 - Not formatting the output properly
 
 ### Extension Ideas
+
 1 Add support for Celsius to Fahrenheit conversion
 2 Add Kelvin conversion
 3 Implement input validation for reasonable temperature ranges
@@ -65,6 +68,7 @@ Create a program that converts temperatures from Fahrenheit to Celsius. The prog
 - Industrial processes
 
 ### Assessment Criteria
+
 Your solution should demonstrate:
 1. Correct mathematical conversion
 2. Robust error handling

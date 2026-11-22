@@ -10,6 +10,7 @@
 - Provide user feedback
 
 ### The Task
+
 Create a grade calculator that:
 1. Accepts a numerical score (0-100)
 2. Converts it to a letter grade
@@ -51,6 +52,7 @@ Create a grade calculator that:
 - Rigid implementation
 
 ### Extension Ideas
+
 1 Add grade point calculation
 2 Support multiple grades
 3 Calculate class average
@@ -73,6 +75,7 @@ Create a grade calculator that:
 - Progress tracking
 
 ### Assessment Criteria
+
 Your solution should demonstrate:
 1 Correct grade calculation
 2 Clear grade boundaries
@@ -83,6 +86,7 @@ Your solution should demonstrate:
 7 Documentation
 
 ### Best Practices
+
 1 Use constants for grade boundaries
 2 Implement clear feedback messages
 3 Handle all possible inputs
