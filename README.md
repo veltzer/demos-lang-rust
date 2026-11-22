@@ -5,7 +5,7 @@
 
 description: Demos for the rust language
 
-project website: https://veltzer.github.io/demos-lang-rust
+project website: <https://veltzer.github.io/demos-lang-rust>
 
 author: Mark Veltzer
 
