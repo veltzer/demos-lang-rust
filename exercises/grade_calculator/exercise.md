@@ -3,6 +3,7 @@
 ## Learning Objectives
 
 ### Primary Goals
+
 - Use range patterns in match expressions
 - Implement nested pattern matching
 - Create modular functions
@@ -12,6 +13,7 @@
 ### The Task
 
 Create a grade calculator that:
+
 1. Accepts a numerical score (0-100)
 2. Converts it to a letter grade
 3. Provides appropriate feedback
@@ -45,6 +47,7 @@ Create a grade calculator that:
     - Result presentation
 
 ### Common Pitfalls to Avoid
+
 - Missing edge cases
 - Unclear grade boundaries
 - Poor error messages
@@ -61,6 +64,7 @@ Create a grade calculator that:
 6 Generate progress reports
 
 ### Testing Your Implementation
+
 - Test each grade boundary
 - Test invalid scores
 - Test edge cases (0, 100)
@@ -68,6 +72,7 @@ Create a grade calculator that:
 - Test feedback system
 
 ### Real-World Applications
+
 - Educational software
 - Student management systems
 - Performance evaluation

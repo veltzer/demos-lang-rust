@@ -3,6 +3,7 @@
 ## Learning Objectives
 
 ### Primary Goals
+
 - Implement multiple user inputs
 - Work with pattern matching
 - Handle different types of errors
@@ -12,6 +13,7 @@
 ### The Task
 
 Create a command-line calculator that:
+
 1. Accepts two numbers
 2. Accepts an operation (+, -, *, /)
 3. Performs the calculation
@@ -42,6 +44,7 @@ Create a command-line calculator that:
     - Input validation
 
 ### Common Pitfalls to Avoid
+
 - Not handling division by zero
 - Missing error cases
 - Unclear user prompts
@@ -57,6 +60,7 @@ Create a command-line calculator that:
 5 Support complex expressions
 
 ### Testing Your Implementation
+
 - Test basic operations
 - Test division by zero
 - Test invalid inputs
@@ -65,6 +69,7 @@ Create a command-line calculator that:
 - Test negative numbers
 
 ### Real-World Applications
+
 - Basic mathematics
 - Financial calculations
 - Engineering tools

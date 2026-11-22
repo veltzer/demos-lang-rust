@@ -3,6 +3,7 @@
 ## Learning Objectives
 
 ### Primary Goals
+
 - Understand basic input/output in Rust
 - Work with floating-point numbers
 - Implement error handling
@@ -12,6 +13,7 @@
 ### The Task
 
 Create a program that converts temperatures from Fahrenheit to Celsius. The program should:
+
 1. Prompt the user for input
 2. Accept a temperature in Fahrenheit
 3. Convert it to Celsius
@@ -39,6 +41,7 @@ Create a program that converts temperatures from Fahrenheit to Celsius. The prog
     - Function documentation
 
 ### Common Pitfalls to Avoid
+
 - Forgetting to handle invalid input
 - Not trimming whitespace from input
 - Missing error handling
@@ -54,6 +57,7 @@ Create a program that converts temperatures from Fahrenheit to Celsius. The prog
 5 Create a temperature comparison feature
 
 ### Testing Your Implementation
+
 - Test with whole numbers
 - Test with decimal numbers
 - Test with negative temperatures
@@ -61,6 +65,7 @@ Create a program that converts temperatures from Fahrenheit to Celsius. The prog
 - Test edge cases (-40°F = -40°C)
 
 ### Real-World Applications
+
 - Weather applications
 - Scientific calculations
 - International communication
@@ -70,6 +75,7 @@ Create a program that converts temperatures from Fahrenheit to Celsius. The prog
 ### Assessment Criteria
 
 Your solution should demonstrate:
+
 1. Correct mathematical conversion
 2. Robust error handling
 3. Clear user interface

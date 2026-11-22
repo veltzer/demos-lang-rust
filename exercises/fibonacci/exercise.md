@@ -3,6 +3,7 @@
 ## Learning Objectives
 
 ### Primary Goals
+
 - Understand sequence generation
 - Implement efficient algorithms
 - Handle numeric limitations
@@ -43,6 +44,7 @@ Create a program that calculates the nth Fibonacci number:
     - Variable reuse
 
 ### Common Pitfalls to Avoid
+
 - Integer overflow
 - Inefficient recursion
 - Poor performance for large n
@@ -59,6 +61,7 @@ Create a program that calculates the nth Fibonacci number:
 6 Handle arbitrary-precision integers
 
 ### Testing Your Implementation
+
 - Test small numbers (0-10)
 - Test larger numbers
 - Test invalid inputs
@@ -66,6 +69,7 @@ Create a program that calculates the nth Fibonacci number:
 - Test edge cases
 
 ### Real-World Applications
+
 - Mathematical modeling
 - Natural growth patterns
 - Financial projections

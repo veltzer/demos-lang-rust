@@ -15,6 +15,7 @@ with the following format:
 Read the book at the beginning
 
 Show to following menu:
+
 1. print the phonebook
 2. search for a name
 3. remove a name
@@ -25,4 +26,5 @@ Show to following menu:
 Implement every option in its own function.
 
 Hint:
+
 * [using a hashmap in rust](https://doc.rust-lang.org/std/collections/struct.HashMap.html)
