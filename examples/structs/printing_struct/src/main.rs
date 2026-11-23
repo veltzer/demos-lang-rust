@@ -6,13 +6,13 @@
 // - https://stackoverflow.com/questions/30253422/how-to-print-structs-and-arrays
 
 
-#[allow(dead_code)]
+#[expect(dead_code, reason = "teaching: Debug output is the lesson here, the fields are never read")]
 #[derive(Debug)]
 struct InnerData {
     some_uint: u32,
 }
 
-#[allow(dead_code)]
+#[expect(dead_code, reason = "teaching: Debug output is the lesson here, the fields are never read")]
 #[derive(Debug)]
 struct Data {
     some_bool: bool,

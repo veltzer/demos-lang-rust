@@ -11,7 +11,7 @@ macro_rules! function {
 
 // The immediately-called closure is the point: it shows what function!()
 // reports from inside a closure.
-#[allow(clippy::redundant_closure_call)]
+#[expect(clippy::redundant_closure_call, reason = "teaching: the immediately-called closure is the point")]
 pub fn main() {
     (|| {
         mod module {

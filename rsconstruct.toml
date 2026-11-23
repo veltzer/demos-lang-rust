@@ -91,11 +91,14 @@ args = ["--offline", "--no-progress", "--persona=pedantic"]
 
 # ─── c / c++ ─────────────────────────────────────────────────────────────────
 
+# Each C file is its own one-file library called from Rust, so the default one-run-per-file mode fits.
 [processor.checker.cppcheck]
+dep_inputs = ["cppcheck.cfg"]
 src_dirs = ["examples/low_level/ffi_to_c/src", "standalone/c_interface"]
 args = [
 	"--error-exitcode=1",
-	"--enable=warning,style,performance,portability",
+	"--enable=warning,style,performance,portability,information,unusedFunction",
 	"--check-level=exhaustive",
 	"--inline-suppr",
+	"--library=cppcheck.cfg",
 ]

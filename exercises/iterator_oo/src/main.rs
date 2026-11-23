@@ -74,7 +74,7 @@ fn main() {
     let range3 = Range::new(5, 8);
     println!("\nManual iteration:");
     let mut iter = range3.iter();
-    #[allow(clippy::while_let_on_iterator)]
+    #[expect(clippy::while_let_on_iterator, reason = "teaching: calling next() by hand shows the iterator protocol")]
     while let Some(value) = iter.next() {
         println!("{}", value);
     }

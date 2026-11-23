@@ -1,8 +1,6 @@
-#![allow(unused_must_use)]
-
 use std::io;
 
-// #[allow(unused_must_use)]
+#[expect(unused_must_use, reason = "teaching: shows how to disregard a Result that must be used")]
 fn main() {
     println!("Guess the number!");
 

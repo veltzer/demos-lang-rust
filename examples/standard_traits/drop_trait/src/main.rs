@@ -15,7 +15,6 @@ impl FileHandle {
     }
 
     // A method to check if the file is considered open
-    #[allow(dead_code)] // Allow this method to be unused for this example
     fn is_open(&self) -> bool {
         self.is_open
     }

@@ -22,7 +22,7 @@ fn main() {
     // println!("{:?}", m);
 }
 
-#[allow(dead_code)]
+#[expect(dead_code, reason = "teaching: the call is commented out and back in to show the borrow error")]
 fn my_func(_m: &MyStruct) {
     // println!("{:?}", m.a);
 }

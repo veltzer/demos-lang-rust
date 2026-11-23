@@ -1,6 +1,6 @@
 // Declaring x first and assigning it later is what this example is about,
 // so clippy's suggestion to merge the two lines would remove the lesson.
-#[allow(clippy::needless_late_init)]
+#[expect(clippy::needless_late_init, reason = "teaching: declaring x first and assigning later is the point")]
 fn main() {
     let x;
     println!("hello");

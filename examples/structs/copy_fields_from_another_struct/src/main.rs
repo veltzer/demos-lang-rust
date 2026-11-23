@@ -1,7 +1,5 @@
 // This is an example of how to copy fields from one struct to another.
 
-#[allow(dead_code)]
-
 #[derive(Debug)]
 struct Data {
     some_bool: bool,
@@ -23,4 +21,5 @@ fn main() {
     };
     // println!("{:?}", var.some_string);
     println!("{:?}", var2);
+    println!("{} {} {} {}", var2.some_bool, var2.some_float, var2.some_int, var2.some_string);
 }

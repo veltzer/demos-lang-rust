@@ -4,8 +4,6 @@
 // * note the comma on the last line, allowed and recommended
 // * no semi-colon at the end of a struct
 
-#[allow(dead_code)]
-
 #[derive(Debug)]
 struct Data {
     some_bool: bool,
@@ -20,4 +18,5 @@ fn main() {
         some_int: 80,
     };
     println!("{:?}", var);
+    println!("{} {} {}", var.some_bool, var.some_float, var.some_int);
 }

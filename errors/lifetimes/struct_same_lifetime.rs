@@ -22,7 +22,6 @@ fn main() {
     // println!("{:?}", m);
 }
 
-#[allow(dead_code)]
 fn my_func(_m: &MyStruct) {
     // println!("{:?}", m.a);
 }

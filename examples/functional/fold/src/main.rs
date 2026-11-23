@@ -1,6 +1,6 @@
 // This example teaches fold itself, so Example 1 stays a fold even though
 // clippy would rather see the equivalent .sum().
-#[allow(clippy::unnecessary_fold)]
+#[expect(clippy::unnecessary_fold, reason = "teaching: this example teaches fold itself, not sum")]
 fn main() {
     // Example 1: Sum of all elements in a vector
     let numbers = vec![1, 2, 3, 4, 5];
