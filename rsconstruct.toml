@@ -81,12 +81,18 @@ required_tools = ["cargo"]
 [processor.checker.clippy.lint]
 src_files = ["Cargo.toml"]
 args = ["--workspace", "--all-targets", "--", "-D", "warnings"]
+# after the cargo build: on a machine that lacks the pinned toolchain the
+# first cargo command installs it, and two of them installing at once
+# collide in rustup
+dep_inputs = ["out/cargo.stamp"]
 
 # cargo test: the unit tests some of the exercises carry
 [processor.checker.clippy.test]
 src_files = ["Cargo.toml"]
 command = "test"
 args = ["--workspace"]
+# after the cargo build, for the same reason
+dep_inputs = ["out/cargo.stamp"]
 
 # lint the YAML files with yamllint (policy: .yamllint.yaml)
 [processor.checker.iyamllint]
