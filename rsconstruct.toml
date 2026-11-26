@@ -125,3 +125,8 @@ args = [
 	"--inline-suppr",
 	"--library=cppcheck.cfg",
 ]
+
+# every lint suppression names a rule and says why (see the fleet's CLAUDE.md)
+[processor.checker.suppressions]
+src_dirs = [".github", "config", "examples", "exercises", "scripts", "src", "standalone/c_interface"]
+src_files = [".auto.enter.sh", ".auto.exit.sh", ".yamllint.yaml", "README.md"]
