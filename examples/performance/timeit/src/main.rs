@@ -13,7 +13,7 @@ fn time_it(func: fn()) {
     func();
 
     let elapsed = now.elapsed();
-    println!("Elapsed: {:.2?}", elapsed);
+    println!("Elapsed: {elapsed:.2?}");
 }
 
 fn code1(limit: i64) {
@@ -27,7 +27,7 @@ fn code1(limit: i64) {
         }
         add = !add;
     }
-    println!("sum is {sum}")
+    println!("sum is {sum}");
 }
 
 fn code2(limit: i64) {
@@ -40,11 +40,11 @@ fn code2(limit: i64) {
          sum-=2*i;
     }
     */
-    println!("sum is {sum}")
+    println!("sum is {sum}");
 }
 
 fn main() {
-    const LIMIT: i64=9999999999;
+    const LIMIT: i64=9_999_999_999;
     time_it(|| { code1(LIMIT) });
     time_it(|| { code2(LIMIT) });
 }

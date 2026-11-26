@@ -26,12 +26,9 @@ fn main() {
         .read_line(&mut num1)
         .expect("Failed to read first number");
     
-    let num1: f64 = match num1.trim().parse() {
-        Ok(num) => num,
-        Err(_) => {
-            println!("Please enter a valid number!");
-            return;
-        }
+    let num1: f64 = if let Ok(num) = num1.trim().parse() { num } else {
+        println!("Please enter a valid number!");
+        return;
     };
 
     println!("Enter second number:");
@@ -40,12 +37,9 @@ fn main() {
         .read_line(&mut num2)
         .expect("Failed to read second number");
 
-    let num2: f64 = match num2.trim().parse() {
-        Ok(num) => num,
-        Err(_) => {
-            println!("Please enter a valid number!");
-            return;
-        }
+    let num2: f64 = if let Ok(num) = num2.trim().parse() { num } else {
+        println!("Please enter a valid number!");
+        return;
     };
 
     println!("Enter operation (+, -, *, /):");
@@ -56,7 +50,7 @@ fn main() {
 
     match calculate(num1, num2, op.trim()) {
         Ok(result) => println!("{} {} {} = {}", num1, op.trim(), num2, result),
-        Err(e) => println!("Error: {}", e)
+        Err(e) => println!("Error: {e}")
     }
 }
 

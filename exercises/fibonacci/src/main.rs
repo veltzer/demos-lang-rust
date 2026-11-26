@@ -27,16 +27,13 @@ fn main() {
         .read_line(&mut input)
         .expect("Failed to read input");
     
-    let n: u32 = match input.trim().parse() {
-        Ok(num) => num,
-        Err(_) => {
-            println!("Please enter a valid positive integer!");
-            return;
-        }
+    let n: u32 = if let Ok(num) = input.trim().parse() { num } else {
+        println!("Please enter a valid positive integer!");
+        return;
     };
     
     let result = fibonacci(n);
-    println!("The {}th Fibonacci number is: {}", n, result);
+    println!("The {n}th Fibonacci number is: {result}");
 }
 
 #[cfg(test)]

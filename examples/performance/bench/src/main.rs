@@ -4,8 +4,9 @@ fn xor_1000_ints() -> u32 {
     (0..1000).fold(0, |old, new| old ^ new)
 }
 
+#[expect(clippy::needless_pass_by_value, reason = "teaching: a hand-written black_box takes its value to hide it from the optimizer")]
 fn black_box<T>(dummy: T) -> T {
-    unsafe { std::ptr::read_volatile(&dummy) }
+    unsafe { std::ptr::read_volatile(&raw const dummy) }
 }
 
 fn main() {
@@ -14,8 +15,8 @@ fn main() {
     let result = xor_1000_ints();
     let duration = start.elapsed();
 
-    println!("Result: {}", result);
-    println!("Time taken: {:?}", duration);
+    println!("Result: {result}");
+    println!("Time taken: {duration:?}");
 
     // Run it multiple times to get a sense of the average performance
     let iterations = 1000;

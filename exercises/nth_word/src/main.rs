@@ -20,12 +20,9 @@ fn main() {
         .expect("Failed to read line");
     
     // Parse n, with error handling
-    let n: usize = match n_input.trim().parse() {
-        Ok(num) => num,
-        Err(_) => {
-            println!("Please enter a valid number!");
-            return;
-        }
+    let n: usize = if let Ok(num) = n_input.trim().parse() { num } else {
+        println!("Please enter a valid number!");
+        return;
     };
     
     // Call the function to find and print the nth word

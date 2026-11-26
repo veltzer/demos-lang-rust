@@ -14,16 +14,13 @@ fn main() {
         .read_line(&mut input)
         .expect("Failed to read input");
     
-    let fahrenheit: f64 = match input.trim().parse() {
-        Ok(num) => num,
-        Err(_) => {
-            println!("Please enter a valid number!");
-            return;
-        }
+    let fahrenheit: f64 = if let Ok(num) = input.trim().parse() { num } else {
+        println!("Please enter a valid number!");
+        return;
     };
     
     let celsius = fahrenheit_to_celsius(fahrenheit);
-    println!("{}°F is equal to {:.1}°C", fahrenheit, celsius);
+    println!("{fahrenheit}°F is equal to {celsius:.1}°C");
 }
 
 #[cfg(test)]

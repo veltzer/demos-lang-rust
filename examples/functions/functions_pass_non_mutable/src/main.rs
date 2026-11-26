@@ -10,6 +10,6 @@ fn main() {
     println!("The length of {s} is {len}");
 }
 
-fn calculate_length(s: &str) -> usize {
+const fn calculate_length(s: &str) -> usize {
     s.len()
 }

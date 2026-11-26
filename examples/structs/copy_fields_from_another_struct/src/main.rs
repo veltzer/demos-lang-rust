@@ -1,6 +1,7 @@
 // This is an example of how to copy fields from one struct to another.
 
 #[derive(Debug)]
+#[expect(clippy::struct_field_names, reason = "teaching: each field is named for the type it holds")]
 struct Data {
     some_bool: bool,
     some_float: f64,
@@ -20,6 +21,6 @@ fn main() {
         ..var
     };
     // println!("{:?}", var.some_string);
-    println!("{:?}", var2);
+    println!("{var2:?}");
     println!("{} {} {} {}", var2.some_bool, var2.some_float, var2.some_int, var2.some_string);
 }

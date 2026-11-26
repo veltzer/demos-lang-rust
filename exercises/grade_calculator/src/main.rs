@@ -1,7 +1,7 @@
 use std::io;
 
 /// Calculates the letter grade based on a numerical score
-fn calculate_grade(score: u32) -> char {
+const fn calculate_grade(score: u32) -> char {
     match score {
         90..=100 => 'A',
         80..=89 => 'B',
@@ -13,7 +13,7 @@ fn calculate_grade(score: u32) -> char {
 }
 
 /// Returns feedback based on the letter grade
-fn get_feedback(grade: char) -> &'static str {
+const fn get_feedback(grade: char) -> &'static str {
     match grade {
         'A' => "Excellent work!",
         'B' => "Good job!",
@@ -33,12 +33,9 @@ fn main() {
         .read_line(&mut input)
         .expect("Failed to read input");
     
-    let score: u32 = match input.trim().parse() {
-        Ok(num) => num,
-        Err(_) => {
-            println!("Please enter a valid number!");
-            return;
-        }
+    let score: u32 = if let Ok(num) = input.trim().parse() { num } else {
+        println!("Please enter a valid number!");
+        return;
     };
     
     if score > 100 {
@@ -47,7 +44,7 @@ fn main() {
     }
     
     let grade = calculate_grade(score);
-    println!("Score: {}, Grade: {}", score, grade);
+    println!("Score: {score}, Grade: {grade}");
     println!("{}", get_feedback(grade));
 }
 

@@ -5,12 +5,12 @@ fn main() {
     // Example 1: Sum of all elements in a vector
     let numbers = vec![1, 2, 3, 4, 5];
     let sum = numbers.iter().fold(0, |acc, &x| acc + x);
-    println!("Sum of {:?} is {}", numbers, sum);
+    println!("Sum of {numbers:?} is {sum}");
 
     // Example 2: Finding the maximum value in a vector
     let numbers = vec![3, 1, 4, 1, 5, 9, 2, 6];
     let max = numbers.iter().fold(i32::MIN, |acc, &x| acc.max(x));
-    println!("Maximum value in {:?} is {}", numbers, max);
+    println!("Maximum value in {numbers:?} is {max}");
 
     // Example 3: Concatenating strings
     let words = ["Hello", "world", "from", "Rust"];
@@ -19,6 +19,7 @@ fn main() {
 
     // Example 4: Custom struct reduction
     #[derive(Debug)]
+    #[expect(clippy::items_after_statements, reason = "teaching: declared at the step that introduces it")]
     struct Point {
         x: i32,
         y: i32,
@@ -35,7 +36,7 @@ fn main() {
         y: acc.y + p.y,
     });
 
-    println!("Sum of all points: {:?}", sum_point);
+    println!("Sum of all points: {sum_point:?}");
 
     // Example 5: Counting occurrences of elements
     let chars = ['a', 'b', 'a', 'c', 'b', 'a'];
@@ -43,5 +44,5 @@ fn main() {
         *acc.entry(c).or_insert(0) += 1;
         acc
     });
-    println!("Character counts: {:?}", char_counts);
+    println!("Character counts: {char_counts:?}");
 }

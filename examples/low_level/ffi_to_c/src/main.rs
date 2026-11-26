@@ -13,6 +13,6 @@ fn main() {
 
         let result = multiply(5000, 5);
 
-        println!("[Rust] Result: {}", result);
+        println!("[Rust] Result: {result}");
     }
 }

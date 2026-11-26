@@ -1,13 +1,13 @@
-use std::sync::mpsc::*;
+use std::sync::mpsc::{Sender, Receiver, channel};
 use std::thread;
 // use std::time::Duration;
-use std::io::*;
+use std::io::{Write, stdout, stdin};
 
 //
 // This is a solution to the exercise.
 //
 
-fn thread_one(tx: Sender<i32>) {
+fn thread_one(tx: &Sender<i32>) {
     print!("thread_one: Give me a number: ");
     stdout().flush().unwrap();
     for line in stdin().lines() {
@@ -27,7 +27,7 @@ fn thread_two(rx: Receiver<i32>) {
 
 fn main() {
     let (tx, rx) = channel::<i32>();
-    let thread_join_handle1 = thread::spawn(move || {thread_one(tx); });
+    let thread_join_handle1 = thread::spawn(move || {thread_one(&tx); });
     let thread_join_handle2 = thread::spawn(move || {thread_two(rx); });
     thread_join_handle1.join().unwrap();
     thread_join_handle2.join().unwrap();

@@ -35,17 +35,15 @@ struct TaskManager {
 }
 
 impl TaskManager {
-    fn new() -> Self {
-        TaskManager {
+    const fn new() -> Self {
+        Self {
             tasks: BinaryHeap::new(),
             task_counter: 0,
         }
     }
 
     fn add_task(&mut self, priority: u8, description: String) {
-        if !(1..=5).contains(&priority) {
-            panic!("Priority must be between 1 and 5");
-        }
+        assert!((1..=5).contains(&priority), "Priority must be between 1 and 5");
 
         self.task_counter += 1;
         let task = Task {

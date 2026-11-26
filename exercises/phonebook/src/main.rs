@@ -21,7 +21,7 @@ fn read_book() -> HashMap<String, String> {
         let line: String = line_or_error.unwrap();
         // print_type_of(dbg!(&fline));
         // let parts: Vec<&str> = fline.strip_suffix("\n").unwrap().split(":").collect();
-        let parts: Vec<&str> = line.split(":").collect();
+        let parts: Vec<&str> = line.split(':').collect();
         // println!("{:?}", parts);
         pb.insert(parts[0].to_string(), parts[1].to_string());
     }

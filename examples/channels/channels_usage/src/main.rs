@@ -24,6 +24,6 @@ fn main() {
     for _ in 0..2 {
         // The recv() method blocks until a message is received
         let message = rx.recv().unwrap();
-        println!("Got: {}", message);
+        println!("Got: {message}");
     }
 }

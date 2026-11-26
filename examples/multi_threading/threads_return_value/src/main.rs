@@ -4,7 +4,7 @@
 
 use std::thread;
 
-fn do_thread() -> i32 {
+const fn do_thread() -> i32 {
     7
 }
 

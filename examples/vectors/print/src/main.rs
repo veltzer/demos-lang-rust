@@ -5,7 +5,7 @@
 
 fn main() {
     let v = vec![1, 3, 5];
-    println!("{:?}", v);
+    println!("{v:?}");
     for x in &v {
         println!("{x}");
     }

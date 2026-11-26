@@ -2,7 +2,7 @@
 // any type names you will get i32
 
 fn print_type_of<T>(_: &T) {
-    println!("{}", std::any::type_name::<T>())
+    println!("{}", std::any::type_name::<T>());
 }
 
 fn main() {
@@ -14,6 +14,6 @@ fn main() {
     // next line will give you a compilation error because the number is too big for i32
     // note: the literal `10000000000000` does not fit into the type `i32` whose range is `-2147483648..=2147483647`
     // let what_am_i=10000000000000;
-    let what_am_i: i64=10000000000000;
+    let what_am_i: i64=10_000_000_000_000;
     print_type_of(&what_am_i);
 }

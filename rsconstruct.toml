@@ -76,6 +76,18 @@ output_files = ["out/cargo.stamp"]
 # rustup for the toolchain rust-toolchain.toml pins.
 required_tools = ["cargo"]
 
+# cargo clippy over every member of the workspace, tests included, with the
+# pedantic and nursery groups ([workspace.lints] in Cargo.toml)
+[processor.checker.clippy.lint]
+src_files = ["Cargo.toml"]
+args = ["--workspace", "--all-targets", "--", "-D", "warnings"]
+
+# cargo test: the unit tests some of the exercises carry
+[processor.checker.clippy.test]
+src_files = ["Cargo.toml"]
+command = "test"
+args = ["--workspace"]
+
 # lint the YAML files with yamllint (policy: .yamllint.yaml)
 [processor.checker.iyamllint]
 src_dirs = [".github"]

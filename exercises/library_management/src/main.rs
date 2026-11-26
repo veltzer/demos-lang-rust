@@ -19,8 +19,8 @@ struct Library {
 }
 
 impl Library {
-    fn new() -> Self {
-        Library {
+    const fn new() -> Self {
+        Self {
             available_books: Vec::new(),
             members: Vec::new(),
         }
@@ -33,7 +33,7 @@ impl Library {
 
     // Creates and owns a new member
     fn register_member(&mut self, name: String) -> u32 {
-        let id = self.members.len() as u32 + 1;
+        let id = u32::try_from(self.members.len()).expect("fewer than 2^32 members") + 1;
         self.members.push(Member {
             id,
             name,
@@ -130,8 +130,8 @@ fn main() {
 
     // Check out a book (ownership transfers from library to member)
     match library.check_out_book(member_id, "123456789") {
-        Ok(_) => println!("Book 'The Rust Programming Language' checked out successfully"),
-        Err(e) => println!("Error checking out book: {}", e),
+        Ok(()) => println!("Book 'The Rust Programming Language' checked out successfully"),
+        Err(e) => println!("Error checking out book: {e}"),
     }
 
     // View borrowed books (borrowing member's data)
@@ -143,13 +143,13 @@ fn main() {
     println!("\nCurrent borrowing report:");
     let report = library.generate_borrowing_report();
     for (id, name, count) in report {
-        println!("Member {} ({}) has {} books", name, id, count);
+        println!("Member {name} ({id}) has {count} books");
     }
 
     // Return the book (ownership transfers back to library)
     match library.return_book(member_id, "123456789") {
-        Ok(_) => println!("\nBook 'The Rust Programming Language' returned successfully"),
-        Err(e) => println!("\nError returning book: {}", e),
+        Ok(()) => println!("\nBook 'The Rust Programming Language' returned successfully"),
+        Err(e) => println!("\nError returning book: {e}"),
     }
 
     // View updated borrowed books
@@ -162,8 +162,8 @@ fn main() {
 
     // Try to return a book that wasn't borrowed (should show error handling)
     match library.return_book(member_id, "nonexistent") {
-        Ok(_) => println!("Book returned successfully"),
-        Err(e) => println!("Expected error occurred: {}", e),
+        Ok(()) => println!("Book returned successfully"),
+        Err(e) => println!("Expected error occurred: {e}"),
     }
 }
 

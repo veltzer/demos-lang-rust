@@ -6,8 +6,8 @@ struct RangeIterator {
 
 // Constructor for our iterator
 impl RangeIterator {
-    fn new(start: i32, end: i32) -> Self {
-        RangeIterator {
+    const fn new(start: i32, end: i32) -> Self {
+        Self {
             current: start,
             end,
         }
@@ -43,12 +43,12 @@ struct Range {
 }
 
 impl Range {
-    fn new(start: i32, end: i32) -> Self {
-        Range { start, end }
+    const fn new(start: i32, end: i32) -> Self {
+        Self { start, end }
     }
     
     // Method that returns our iterator
-    fn iter(&self) -> RangeIterator {
+    const fn iter(&self) -> RangeIterator {
         RangeIterator::new(self.start, self.end)
     }
 }
@@ -60,14 +60,14 @@ fn main() {
     // Use a for loop with our iterator
     println!("Using for loop:");
     for num in range.iter() {
-        println!("{}", num);
+        println!("{num}");
     }
     
     // Create another range and use iterator methods directly
     let range2 = Range::new(10, 15);
     println!("\nUsing iterator methods:");
     let sum: i32 = range2.iter().sum();
-    println!("Sum: {}", sum);
+    println!("Sum: {sum}");
     
     // Manual iteration with while let (deliberately calling next() by hand
     // to demonstrate the iterator protocol, hence the allow below).
@@ -76,6 +76,6 @@ fn main() {
     let mut iter = range3.iter();
     #[expect(clippy::while_let_on_iterator, reason = "teaching: calling next() by hand shows the iterator protocol")]
     while let Some(value) = iter.next() {
-        println!("{}", value);
+        println!("{value}");
     }
 }

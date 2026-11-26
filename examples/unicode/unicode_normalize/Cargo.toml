@@ -7,3 +7,6 @@ edition = "2021"
 
 [dependencies]
 unicode-normalization = "0.1.19"
+
+[lints]
+workspace = true

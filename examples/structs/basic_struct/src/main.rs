@@ -5,6 +5,7 @@
 // * no semi-colon at the end of a struct
 
 #[derive(Debug)]
+#[expect(clippy::struct_field_names, reason = "teaching: each field is named for the type it holds")]
 struct Data {
     some_bool: bool,
     some_float: f64,
@@ -17,6 +18,6 @@ fn main() {
         some_float: 10.3,
         some_int: 80,
     };
-    println!("{:?}", var);
+    println!("{var:?}");
     println!("{} {} {}", var.some_bool, var.some_float, var.some_int);
 }

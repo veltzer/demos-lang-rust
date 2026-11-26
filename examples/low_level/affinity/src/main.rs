@@ -17,12 +17,12 @@ fn main() {
             // Pin this thread to a single CPU core.
             let res = core_affinity::set_for_current(core_id);
             if res {
-                println!("in thread {:?}", core_id);
+                println!("in thread {core_id:?}");
             }
         })
     }).collect::<Vec<_>>();
 
-    for handle in handles.into_iter() {
+    for handle in handles {
         handle.join().unwrap();
     }
 }

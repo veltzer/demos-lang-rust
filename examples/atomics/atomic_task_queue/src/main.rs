@@ -11,7 +11,7 @@ struct TaskQueue {
 
 impl TaskQueue {
     fn new(size: usize) -> Self {
-        TaskQueue {
+        Self {
             tasks: (0..size).map(|_| AtomicBool::new(false)).collect(),
             head: AtomicUsize::new(0),
             tail: AtomicUsize::new(0),
@@ -71,7 +71,7 @@ fn main() {
                 while !queue.enqueue() {
                     thread::yield_now();
                 }
-                println!("Producer {} enqueued task {}", i, j);
+                println!("Producer {i} enqueued task {j}");
                 thread::sleep(Duration::from_millis(1));
             }
         }));
@@ -85,7 +85,7 @@ fn main() {
             while tasks_processed < 15 / num_consumers {
                 if queue.dequeue() {
                     tasks_processed += 1;
-                    println!("Consumer {} processed a task", i);
+                    println!("Consumer {i} processed a task");
                     thread::sleep(Duration::from_millis(2));
                 } else {
                     thread::yield_now();

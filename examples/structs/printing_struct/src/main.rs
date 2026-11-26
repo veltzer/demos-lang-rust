@@ -30,5 +30,5 @@ fn main() {
             some_uint: 56,
         },
     };
-    println!("{:?}", var);
+    println!("{var:?}");
 }

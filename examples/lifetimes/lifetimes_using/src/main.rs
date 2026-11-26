@@ -12,7 +12,7 @@ fn main() {
     {
         let second = String::from("tea");
         chosen = random_choose(&first, &second);
-        println!("chosen: {}", chosen);
+        println!("chosen: {chosen}");
     }
     // next line will cause a compilation error
     // println!("chosen: {}", chosen);

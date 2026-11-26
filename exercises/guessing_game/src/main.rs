@@ -21,12 +21,9 @@ fn main() {
             //.expect("Failed to read line");
         
         // Convert guess to number, handle invalid input
-        let guess: i32 = match guess.trim().parse() {
-            Ok(i) => i,
-            Err(_) => {
-                println!("Please enter a valid number!");
-                continue;
-            }
+        let guess: i32 = if let Ok(i) = guess.trim().parse() { i } else {
+            println!("Please enter a valid number!");
+            continue;
         };
         
         // Check if guess is in valid range

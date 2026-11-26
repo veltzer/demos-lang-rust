@@ -3,5 +3,5 @@
 
 fn main() {
     const X: i32=5;
-    println!("X={X}")
+    println!("X={X}");
 }

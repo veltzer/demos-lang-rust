@@ -1,5 +1,5 @@
 use std::fs::File;
-use std::io::*;
+use std::io::{BufRead, BufReader};
 
 /*
  * This is an example of how to read a file line by line in rust

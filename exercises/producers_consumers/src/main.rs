@@ -5,23 +5,23 @@ use std::io::Write;
 use rand::RngExt;
 use crossbeam_channel::{bounded, Sender, Receiver};
 
-fn producer(id: usize, tx: Sender<i32>) {
+fn producer(id: usize, tx: &Sender<i32>) {
     let mut rng = rand::rng();
     loop {
         let number: i32 = rng.random();
         if tx.send(number).is_err() {
             break;
         }
-        println!("Producer {} produced: {}", id, number);
+        println!("Producer {id} produced: {number}");
         thread::sleep(Duration::from_millis(1));
     }
 }
 
-fn consumer(id: usize, rx: Receiver<i32>) {
+fn consumer(id: usize, rx: &Receiver<i32>) {
     let mut file = File::create("/dev/null").expect("Failed to open /dev/null");
     while let Ok(number) = rx.recv() {
-        writeln!(file, "{}", number).expect("Failed to write to /dev/null");
-        println!("Consumer {} consumed: {}", id, number);
+        writeln!(file, "{number}").expect("Failed to write to /dev/null");
+        println!("Consumer {id} consumed: {number}");
     }
 }
 
@@ -35,13 +35,13 @@ fn main() {
     // Spawn producer threads
     for i in 0..n_producers {
         let tx = tx.clone();
-        handles.push(thread::spawn(move || producer(i, tx)));
+        handles.push(thread::spawn(move || producer(i, &tx)));
     }
 
     // Spawn consumer threads
     for i in 0..m_consumers {
         let rx = rx.clone();
-        handles.push(thread::spawn(move || consumer(i, rx)));
+        handles.push(thread::spawn(move || consumer(i, &rx)));
     }
 
     // Wait for all threads to complete (this will never happen in this case)

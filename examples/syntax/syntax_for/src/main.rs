@@ -1,15 +1,17 @@
+use std::collections::HashMap;
+
 fn main() {
     // 1. Iterating over a range
     println!("1. Iterating over a range:");
     for i in 0..5 {
-        print!("{} ", i);
+        print!("{i} ");
     }
     println!("\n");
 
     // 2. Iterating over an inclusive range
     println!("2. Iterating over an inclusive range:");
     for i in 1..=5 {
-        print!("{} ", i);
+        print!("{i} ");
     }
     println!("\n");
 
@@ -17,38 +19,38 @@ fn main() {
     println!("3. Iterating over a vector:");
     let numbers = vec![1, 2, 3, 4, 5];
     for num in &numbers {
-        print!("{} ", num);
+        print!("{num} ");
     }
     println!("\n");
 
     // 4. Iterating with an index
     println!("4. Iterating with an index:");
     for (index, value) in numbers.iter().enumerate() {
-        println!("Index: {}, Value: {}", index, value);
+        println!("Index: {index}, Value: {value}");
     }
     println!();
 
     // 5. Iterating over a string's characters
     println!("5. Iterating over a string's characters:");
     for c in "Hello, 世界!".chars() {
-        print!("{} ", c);
+        print!("{c} ");
     }
     println!("\n");
 
     // 6. Iterating over array
     println!("6. Iterating over an array:");
     let array = [10, 20, 30, 40, 50];
-    for element in array.iter() {
-        print!("{} ", element);
+    for element in &array {
+        print!("{element} ");
     }
     println!("\n");
 
     // 7. Iterating over a mutable collection
     println!("7. Iterating over a mutable collection:");
     let mut mutable_numbers = [1, 2, 3, 4, 5];
-    for num in mutable_numbers.iter_mut() {
+    for num in &mut mutable_numbers {
         *num *= 2;
-        print!("{} ", num);
+        print!("{num} ");
     }
     println!("\n");
 
@@ -59,19 +61,18 @@ fn main() {
             if x == 2 && y == 2 {
                 break 'outer;
             }
-            println!("({}, {})", x, y);
+            println!("({x}, {y})");
         }
     }
     println!();
 
     // 9. Iterating over a HashMap
     println!("9. Iterating over a HashMap:");
-    use std::collections::HashMap;
     let mut map = HashMap::new();
     map.insert("apple", 1);
     map.insert("banana", 2);
     map.insert("cherry", 3);
     for (key, value) in &map {
-        println!("{}: {}", key, value);
+        println!("{key}: {value}");
     }
 }

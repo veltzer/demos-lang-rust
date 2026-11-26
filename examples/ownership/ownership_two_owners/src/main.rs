@@ -4,12 +4,12 @@ fn main() {
     let s1 = String::from("hello");
     let s2 = String::from("world");
     let s = choose_one_of_two(s1, s2);
-    println!("{}", s);
+    println!("{s}");
 }
 
 fn choose_one_of_two(s1: String, s2: String) -> String {
     let my_pid = process::id();
-    println!("my_pid = {}", my_pid);
+    println!("my_pid = {my_pid}");
     if my_pid.is_multiple_of(2) {
         s1
     } else {

@@ -6,16 +6,16 @@ struct FileHandle {
 
 impl FileHandle {
     // Constructor for our FileHandle
-    fn new(name: &str) -> FileHandle {
-        println!("Opening file: {}", name);
-        FileHandle {
+    fn new(name: &str) -> Self {
+        println!("Opening file: {name}");
+        Self {
             name: String::from(name),
             is_open: true, // Simulate the file being opened
         }
     }
 
     // A method to check if the file is considered open
-    fn is_open(&self) -> bool {
+    const fn is_open(&self) -> bool {
         self.is_open
     }
 }
@@ -44,9 +44,9 @@ struct NoisyDropper {
 }
 
 impl NoisyDropper {
-    fn new(id: i32, message: &str) -> NoisyDropper {
-        println!("NoisyDropper {} created with message: '{}'", id, message);
-        NoisyDropper {
+    fn new(id: i32, message: &str) -> Self {
+        println!("NoisyDropper {id} created with message: '{message}'");
+        Self {
             id,
             message: String::from(message),
         }

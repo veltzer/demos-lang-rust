@@ -1,10 +1,10 @@
 // this example prints out various simple types of rust
 use std::io::stdout;
-use std::io::*;
+use std::io::{BufRead, BufReader};
 use std::fs::File;
 
 fn print_type_of<T>(_: &T) {
-    println!("{}", std::any::type_name::<T>())
+    println!("{}", std::any::type_name::<T>());
 }
 
 fn main() {

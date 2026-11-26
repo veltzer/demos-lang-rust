@@ -1,5 +1,5 @@
 use std::fs::File;
-use std::io::*;
+use std::io::{Write, BufRead, stdin, BufReader};
 
 /*
  * This is a solution to the exercise.
@@ -16,7 +16,7 @@ fn main() {
     let lines = BufReader::new(file).lines(); 
     for line in lines {
         let fline = line.unwrap();
-        let parts: Vec<&str> = fline.split(":").collect();
+        let parts: Vec<&str> = fline.split(':').collect();
         let current_shell = parts[6];
         if current_shell==shell {
             let username = parts[0];

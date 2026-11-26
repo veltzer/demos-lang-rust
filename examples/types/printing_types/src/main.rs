@@ -10,7 +10,7 @@ fn get_type_name<T>(_: &T) -> &'static str {
 }
 
 fn print_type_of<T>(_: &T) {
-    println!("{}", type_name::<T>())
+    println!("{}", type_name::<T>());
 }
 
 fn main() {

@@ -4,6 +4,7 @@
 
 #[expect(unused_variables, reason = "teaching: the attribute silences the unused-variable warning")]
 fn main() {
+    #[expect(clippy::no_effect_underscore_binding, reason = "teaching: the binding is there to be read, not used")]
     let _x: i32=0;
     let x: i32=0;
     println!("Hello World!");

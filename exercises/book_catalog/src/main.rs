@@ -9,8 +9,8 @@ struct Book {
 // Implement methods for Book
 impl Book {
     // Constructor method
-    fn new(title: &str, author: &str) -> Book {
-        Book {
+    fn new(title: &str, author: &str) -> Self {
+        Self {
             title: String::from(title),
             author: String::from(author),
         }
@@ -30,11 +30,11 @@ fn main() {
     
     // Print the books using the Display trait implementation
     println!("My book catalog:");
-    println!("1. {}", book1);
-    println!("2. {}", book2);
+    println!("1. {book1}");
+    println!("2. {book2}");
 
     // The Debug derive is also available for developer-facing output
     println!("\nDebug view:");
-    println!("1. {:?}", book1);
-    println!("2. {:?}", book2);
+    println!("1. {book1:?}");
+    println!("2. {book2:?}");
 }

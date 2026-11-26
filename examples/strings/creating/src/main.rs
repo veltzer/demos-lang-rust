@@ -2,7 +2,7 @@
 // Remember that strings are always on the heap
 
 fn print_type_of<T>(_: &T) {
-    println!("{}", std::any::type_name::<T>())
+    println!("{}", std::any::type_name::<T>());
 }
 
 

@@ -2,7 +2,7 @@
 // you have an add() function but you need a function that keeps one of it's
 // variables constant and only sends the second one.
 
-fn add(a: i32, b: i32) -> i32 {
+const fn add(a: i32, b: i32) -> i32 {
     a+b
 }
 

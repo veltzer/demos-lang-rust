@@ -1,6 +1,6 @@
 // simple example of function calling a function
 
-fn my_func() -> i32 {
+const fn my_func() -> i32 {
     5
 }
 //

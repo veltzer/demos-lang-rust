@@ -28,13 +28,10 @@ impl<'a> Iterator for ChainedIterator<'a> {
     fn next(&mut self) -> Option<Self::Item> {
         if self.using_first {
             // Try to get the next item from the first iterator
-            match self.first_iter.next() {
-                Some(value) => Some(value),
-                None => {
-                    // First iterator is exhausted, switch to the second
-                    self.using_first = false;
-                    self.second_iter.next()
-                }
+            if let Some(value) = self.first_iter.next() { Some(value) } else {
+                // First iterator is exhausted, switch to the second
+                self.using_first = false;
+                self.second_iter.next()
             }
         } else {
             // Already using the second iterator
@@ -54,6 +51,6 @@ fn main() {
     // Use the iterator in a for loop
     println!("Iterating through chained vectors:");
     for value in chained {
-        println!("{}", value);
+        println!("{value}");
     }
 }

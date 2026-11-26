@@ -16,9 +16,9 @@ fn main() {
     let mut a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     a[6] += 1;
     let slice = get_slice(&a);
-    println!("slice is: {:?}", slice);
+    println!("slice is: {slice:?}");
     // this mutation causes the slice to be un-usable
     a[6] += 1;
     // println!("slice is: {:?}", slice); // <--- this causes a compilation error
-    println!("a is: {:?}", a);
+    println!("a is: {a:?}");
 }

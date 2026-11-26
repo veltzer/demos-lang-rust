@@ -3,7 +3,7 @@
  */
 use std::io;
 
-fn divide_by_two(num: i32) -> Option<i32> {
+const fn divide_by_two(num: i32) -> Option<i32> {
     if num % 2 == 0 {
         Some(num/2)
     } else {
@@ -17,5 +17,5 @@ fn main() {
     let x: i32 = input_line.trim().parse().unwrap();
     // you must call unwrap
     let result = divide_by_two(x).unwrap();
-    println!("divided by 2 is {result}")
+    println!("divided by 2 is {result}");
 }
